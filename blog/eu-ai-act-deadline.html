@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EU AI Act deadline 2 augustus 2026: wat moet je nu doen? | DV Social</title>
+  <meta name="description" content="Op 2 augustus 2026 start de volledige handhaving van de EU AI Act. Ontdek wat er precies verandert, hoeveel tijd je nog hebt en welke stappen je nu moet zetten.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dvsocial.nl/blog/eu-ai-act-deadline">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"EU AI Act deadline 2 augustus 2026: wat moet je nu doen?","author":{"@type":"Person","name":"Danny Verbeek","worksFor":{"@type":"Organization","name":"DV Social","url":"https://dvsocial.nl"}},"publisher":{"@type":"Organization","name":"DV Social","url":"https://dvsocial.nl"},"datePublished":"2026-03-17","mainEntityOfPage":"https://dvsocial.nl/blog/eu-ai-act-deadline","inLanguage":"nl"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAFAF8; --white: #FFFFFF; --border-light: #E5E3DC;
+      --text: #1A1A1A; --muted: #6B6B6B; --dim: #A8A8A8;
+      --gold: #C9A84C; --gold-bg: #F7F0DC; --gold-dark: #7A5F0A;
+      --surface: #F2F0EA;
+      --nav-bg: rgba(10,10,10,0.95); --nav-border: #2a2a2a; --nav-muted: #888;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--nav-border); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--nav-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; font-family: 'Inter', sans-serif; }
+    .nav-links a:hover { color: #e0e0e0; }
+    .nav-cta { background: var(--gold); color: #000 !important; padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: 600; font-size: 0.85rem !important; }
+
+    .hero { max-width: 720px; margin: 64px auto 48px; padding: 0 24px; }
+    .breadcrumb { font-size: 0.75rem; color: var(--dim); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--dim); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 6px; }
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; color: var(--gold-dark); background: var(--gold-bg); padding: 3px 10px; border-radius: 4px; letter-spacing: 0.04em; margin-bottom: 16px; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; color: var(--text); margin-bottom: 16px; }
+    .lead { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 24px; }
+    .meta { display: flex; gap: 16px; font-size: 0.8rem; color: var(--dim); padding-top: 16px; border-top: 1px solid var(--border-light); flex-wrap: wrap; }
+    .meta strong { color: var(--muted); font-weight: 500; }
+
+    .divider { max-width: 720px; margin: 0 auto 48px; padding: 0 24px; border: none; border-top: 1px solid var(--border-light); }
+
+    article { max-width: 720px; margin: 0 auto; padding: 0 24px 96px; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; color: var(--text); margin: 48px 0 14px; line-height: 1.2; }
+    h3 { font-size: 0.75rem; font-weight: 600; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin: 28px 0 10px; }
+    p { margin-bottom: 16px; font-size: 0.95rem; }
+    a { color: var(--gold-dark); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color 0.15s; }
+    a:hover { text-decoration-color: var(--gold); }
+    strong { font-weight: 600; }
+    ul { margin: 0 0 16px 20px; }
+    ul li { margin-bottom: 8px; font-size: 0.95rem; }
+
+    /* Countdown */
+    .countdown {
+      background: var(--white); border: 1px solid var(--border-light);
+      border-top: 3px solid var(--gold);
+      border-radius: 8px; padding: 24px 28px; margin: 24px 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .countdown-eyebrow { font-size: 0.72rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+    .countdown-title { font-size: 1rem; font-weight: 600; color: var(--text); }
+    .countdown-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 700; color: var(--gold); line-height: 1; text-align: right; }
+    .countdown-unit { font-size: 0.75rem; color: var(--dim); font-weight: 500; text-align: right; margin-top: 2px; }
+
+    /* Timeline */
+    .timeline { margin: 24px 0; }
+    .tl-item { display: flex; gap: 16px; }
+    .tl-left { display: flex; flex-direction: column; align-items: center; width: 32px; flex-shrink: 0; }
+    .tl-dot { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--border-light); background: var(--white); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; z-index: 1; }
+    .tl-dot.done { background: var(--surface); color: var(--dim); }
+    .tl-dot.now { border-color: var(--gold); background: var(--gold-bg); color: var(--gold-dark); }
+    .tl-dot.deadline { border-color: #C03030; background: #FDEAEA; color: #C03030; width: 32px; height: 32px; margin-left: -3px; }
+    .tl-line { width: 2px; background: var(--border-light); flex: 1; margin: 3px 0; min-height: 20px; }
+    .tl-item:last-child .tl-line { display: none; }
+    .tl-content { padding: 2px 0 24px; }
+    .tl-date { font-size: 0.75rem; color: var(--dim); font-weight: 500; margin-bottom: 2px; }
+    .tl-title { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+    .tl-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.55; }
+
+    /* Checklist */
+    .checklist { margin: 12px 0 20px; border: 1px solid var(--border-light); border-radius: 8px; overflow: hidden; background: var(--white); }
+    .cl-item { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-bottom: 1px solid var(--border-light); }
+    .cl-item:last-child { border-bottom: none; }
+    .cl-box { width: 16px; height: 16px; border: 2px solid var(--border-light); border-radius: 3px; flex-shrink: 0; margin-top: 3px; }
+    .cl-main { font-size: 0.9rem; font-weight: 500; color: var(--text); margin-bottom: 1px; }
+    .cl-sub { font-size: 0.8rem; color: var(--muted); }
+
+    .highlight { background: var(--gold-bg); border-left: 3px solid var(--gold); padding: 16px 20px; margin: 24px 0; border-radius: 0 6px 6px 0; }
+    .highlight p { margin-bottom: 0; font-size: 0.9rem; }
+
+    .cta-block { background: #141414; border: 1px solid #2a2a2a; padding: 44px 36px; text-align: center; margin: 52px 0; border-radius: 8px; }
+    .cta-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: #fff; text-transform: none; letter-spacing: 0; margin-bottom: 10px; }
+    .cta-block p { color: #888; font-size: 0.9rem; margin-bottom: 24px; }
+    .btn-gold { display: inline-block; background: var(--gold); color: #000; font-size: 0.9rem; font-weight: 600; padding: 0.75rem 1.8rem; border-radius: 4px; text-decoration: none; transition: opacity 0.15s; }
+    .btn-gold:hover { opacity: 0.85; }
+
+    .related { border-top: 1px solid var(--border-light); padding-top: 36px; margin-top: 52px; }
+    .related-label { font-size: 0.72rem; font-weight: 700; color: var(--dim); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--white); border: 1px solid var(--border-light); border-radius: 6px; text-decoration: none; transition: border-color 0.15s; }
+    .related-link:hover { border-color: var(--gold); }
+    .related-link-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text); }
+    .related-link-arrow { color: var(--gold); margin-left: 12px; flex-shrink: 0; }
+
+    footer { border-top: 1px solid var(--border-light); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--dim); flex-wrap: wrap; gap: 10px; }
+    footer a { color: var(--dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem; } .nav-links { display: none; }
+      .hero, article { padding: 0 20px; } .hero { margin-top: 40px; }
+      h1 { font-size: 1.8rem; }
+      .countdown { flex-direction: column; align-items: flex-start; }
+      .countdown-number, .countdown-unit { text-align: left; }
+      footer { padding: 24px 20px; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://dvsocial.nl" class="nav-logo">DV.Social</a>
+  <ul class="nav-links">
+    <li><a href="https://dvsocial.nl/#diensten">Diensten</a></li>
+    <li><a href="https://dvsocial.nl/#scan">Gratis scan</a></li>
+    <li><a href="https://dvsocial.nl/#over">Over ons</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="https://dvsocial.nl/#contact">Contact</a></li>
+    <li><a href="https://ai-compliance-check.nl" class="nav-cta">Doe de scan →</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://dvsocial.nl">Home</a> <span>›</span>
+    <a href="/blog">Blog</a> <span>›</span>
+    EU AI Act deadline
+  </nav>
+  <span class="tag">Deadline</span>
+  <h1>De EU AI Act deadline: wat moet je doen voor 2 augustus 2026?</h1>
+  <p class="lead">Minder dan vijf maanden. Dat is wat Nederlandse MKB-bedrijven nog hebben om te voldoen aan de zwaarste AI-wetgeving ooit. Hier is een concreet actieplan.</p>
+  <div class="meta">
+    <strong>Danny Verbeek — EU AI Act Specialist</strong>
+    <span>17 maart 2026</span>
+    <span>9 min leestijd</span>
+  </div>
+</header>
+
+<hr class="divider">
+
+<article>
+
+  <div class="countdown">
+    <div>
+      <div class="countdown-eyebrow">Deadline</div>
+      <div class="countdown-title">2 augustus 2026 — volledige handhaving EU AI Act</div>
+    </div>
+    <div>
+      <div class="countdown-number" id="days-left">138</div>
+      <div class="countdown-unit">dagen resterend</div>
+    </div>
+  </div>
+
+  <p>Op 2 augustus 2026 treedt de volledige handhaving van de EU AI Act in werking. Dat is niet het moment waarop je begint met voorbereiden — dat is het moment waarop toezichthouders actief kunnen optreden. Wie dan geen compliance-programma heeft, loopt direct risico op boetes, reputatieschade en persoonlijke aansprakelijkheid.</p>
+
+  <h2>De volledige tijdlijn</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot done">✓</div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-date">1 augustus 2024</div>
+        <div class="tl-title">De wet treedt officieel in werking</div>
+        <div class="tl-desc">De EU AI Act is gepubliceerd en bindend. De gefaseerde implementatieperiode begint.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot done">✓</div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-date">2 februari 2025</div>
+        <div class="tl-title">Verboden AI-systemen zijn strafbaar</div>
+        <div class="tl-desc">Emotieherkenning op de werkvloer, sociale scoring en subliminale manipulatie zijn verboden. Dit is al van kracht.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot done">✓</div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-date">2 augustus 2025</div>
+        <div class="tl-title">GPAI-regelgeving actief</div>
+        <div class="tl-desc">Providers van algemene AI-modellen (ChatGPT, Copilot, Gemini) voldoen aan transparantie- en documentatieverplichtingen.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot now">Nu</div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-date">Maart 2026</div>
+        <div class="tl-title">Voorbereiding — je bent hier</div>
+        <div class="tl-desc">Minder dan vijf maanden resterend. Dit is het moment voor audit, documentatie en implementatie van protocols.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot deadline">!</div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-date" style="color:#C03030;font-weight:600;">2 augustus 2026</div>
+        <div class="tl-title">Volledige handhaving — alle hoog-risico verplichtingen</div>
+        <div class="tl-desc">RDI kan inspecties uitvoeren, boetes opleggen en systemen stilleggen. Boetes tot €35 miljoen of 7% van de omzet.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>Veelgehoorde misvatting:</strong> "Wij kopen tools in bij grote leveranciers — dat is hun verantwoordelijkheid." Als deployer van een hoog-risico systeem ben je mede-verantwoordelijk voor correct gebruik, toezicht en documentatie. De verantwoordelijkheid stopt niet bij de leverancier.</p>
+  </div>
+
+  <h2>Het concrete actieplan</h2>
+
+  <h3>Fase 1 — Inventarisatie (week 1–2)</h3>
+  <div class="checklist">
+    <div class="cl-item"><div class="cl-box"></div><div><div class="cl-main">Maak een lijst van alle AI-systemen in gebruik</div><div class="cl-sub">Inclusief HR-software, planningssystemen, chatbots en tools als ChatGPT of Copilot</div></div></div>
+    <div class="cl-item"><div class="cl-box"></div><div><div class="cl-main">Classificeer elk systeem op risiconiveau</div><div class="cl-sub">Hoog risico, beperkt risico, of minimaal risico</div></div></div>
+    <div class="cl-item"><div class="cl-box"></div><div><div class="cl-main">Bepaal jouw rol: aanbieder of deployer?</div><div class="cl-sub">Je verplichtingen verschillen per rol</div></div></div>
+    <div class="cl-item"><div class="cl-box"></div><div><div class="cl-main">Controleer leverancierscontracten op AI Act-bepalingen</div><div class="cl-sub">Vraag je leveranciers om conformiteitsdocumentatie</div></div></div>
+  </div>
+
+  <h3>Fase 2 — Documentatie en beleid (week 3–6)</h3>
+  <div class="checklist">
+    <div class="cl-item"><div class="cl-box"></div><div><div class="cl-main">Stel een risicobeheersysteem op (Artikel 9)</div><div class="cl-sub">Identificeer risico's per systeem, beschrijf beheersmaatregelen</div></div></div>
+    <div class="cl-item"><div class="cl-box"></div><div><div class="cl-main">Schrijf een menselijk toezichtprotocol (Artikel 14)</div><div class="cl-sub">Wie is verantwoordelijk, hoe wordt gecontroleerd, wanneer wordt de AI overruled?</div></div></div>
+    <div class="cl-item"><div class="cl-box"></div><div><div class="cl-main">Implementeer transparantiecommunicatie (Artikel 13 &amp; 26)</div><div class="cl-sub">Medewerkers en klanten informeren over AI-gebruik</div></div></div>
+    <div class="cl-item"><div class="cl-box"></div><div><div class="cl-main">Voer een bias- en datakwaliteitsaudit uit (Artikel 10)</div><div class="cl-sub">Met name relevant voor HR-selectiesystemen</div></div></div>
+  </div>
+
+  <h3>Fase 3 — Training en implementatie (week 7–12)</h3>
+  <div class="checklist">
+    <div class="cl-item"><div class="cl-box"></div><div><div class="cl-main">Train alle medewerkers die met AI-systemen werken</div><div class="cl-sub">Nadruk op beperkingen van AI en hun eigen verantwoordelijkheid</div></div></div>
+    <div class="cl-item"><div class="cl-box"></div><div><div class="cl-main">Wijs een AI-compliance verantwoordelijke aan</div><div class="cl-sub">Intern aanspreekpunt voor toezichthouders</div></div></div>
+    <div class="cl-item"><div class="cl-box"></div><div><div class="cl-main">Stel procedures in voor incidentrapportage</div><div class="cl-sub">Wat doe je als een AI-systeem een fout maakt?</div></div></div>
+    <div class="cl-item"><div class="cl-box"></div><div><div class="cl-main">Archiveer alle documentatie toegankelijk</div><div class="cl-sub">Toezichthouders kunnen inzage vragen — alles moet vindbaar zijn</div></div></div>
+  </div>
+
+  <h2>Veelgemaakte fouten</h2>
+  <h3>"We wachten tot de sector met richtlijnen komt"</h3>
+  <p>Brancheorganisaties publiceren richtlijnen, maar ze ontheffen je niet van je individuele verplichtingen. Wachten op sector-consensus is een strategie die je op achterstand zet.</p>
+  <h3>"Onze IT-afdeling regelt het wel"</h3>
+  <p>AI-compliance is geen IT-vraagstuk — het is een organisatorisch en juridisch vraagstuk. De beleidskeuzes, toezichtprotocollen en trainingen vallen onder HR en directie.</p>
+  <h3>"Wij zijn te klein om gecontroleerd te worden"</h3>
+  <p>Klachten komen van individuen. Eén afgewezen sollicitant met een vermoeden van algoritmische discriminatie kan een formeel onderzoek triggeren — ongeacht je bedrijfsgrootte.</p>
+
+  <div class="cta-block">
+    <h3>Weet je al waar je staat?</h3>
+    <p>Start met de gratis scan en ontvang binnen 3 minuten een persoonlijk risicorapport — met je score en een concreet stappenplan.</p>
+    <a href="https://ai-compliance-check.nl" class="btn-gold">Start de gratis scan →</a>
+  </div>
+
+  <div class="related">
+    <p class="related-label">Meer lezen</p>
+    <div class="related-links">
+      <a href="/blog/wat-is-de-eu-ai-act" class="related-link">
+        <span class="related-link-title">Wat is de EU AI Act? Uitleg voor het Nederlandse MKB</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="/blog/eu-ai-act-boetes" class="related-link">
+        <span class="related-link-title">EU AI Act boetes: wat zijn de sancties voor jouw bedrijf?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <a href="https://dvsocial.nl" style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--gold);text-decoration:none;">DV.Social</a>
+  <span>© 2026 DV Social · KVK 96576545 · <a href="mailto:danny@dvsocial.nl">danny@dvsocial.nl</a></span>
+</footer>
+
+<script>
+  const diff = Math.ceil((new Date('2026-08-02') - new Date()) / 86400000);
+  const el = document.getElementById('days-left');
+  if (el && diff > 0) el.textContent = diff;
+</script>
+
+</body>
+</html>
