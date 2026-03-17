@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — EU AI Act uitleg voor het Nederlandse MKB | DV Social</title>
+  <meta name="description" content="Praktische uitleg over de EU AI Act voor Nederlandse ondernemers. Wat zijn de boetes, de deadline en wat moet je nu doen?">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dvsocial.nl/blog">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAFAF8;
+      --white: #FFFFFF;
+      --border-light: #E5E3DC;
+      --text: #1A1A1A;
+      --muted: #6B6B6B;
+      --dim: #A8A8A8;
+      --gold: #C9A84C;
+      --gold-bg: #F7F0DC;
+      --gold-dark: #7A5F0A;
+      --surface: #F2F0EA;
+      /* Nav kleuren — zelfde als index.html */
+      --nav-bg: rgba(10,10,10,0.95);
+      --nav-border: #2a2a2a;
+      --nav-muted: #888;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV — identiek aan index.html ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--nav-border);
+      padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-weight: 700;
+      color: var(--gold); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a {
+      color: var(--nav-muted); text-decoration: none;
+      font-size: 0.9rem; transition: color 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .nav-links a:hover, .nav-links a.active { color: #e0e0e0; }
+    .nav-cta {
+      background: var(--gold); color: #000 !important;
+      padding: 0.5rem 1.2rem; border-radius: 4px;
+      font-weight: 600; font-size: 0.85rem !important;
+    }
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* ── BODY — licht ── */
+    .page-header {
+      max-width: 760px; margin: 68px auto 48px; padding: 0 24px;
+    }
+    .eyebrow {
+      font-size: 0.75rem; font-weight: 600; color: var(--gold);
+      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700; color: var(--text);
+      line-height: 1.2; margin-bottom: 14px;
+    }
+    .page-lead { font-size: 1.05rem; color: var(--muted); line-height: 1.65; }
+
+    .articles { max-width: 760px; margin: 0 auto; padding: 0 24px 96px; }
+    hr.divider { border: none; border-top: 1px solid var(--border-light); margin-bottom: 0; }
+
+    .article-card {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 20px; align-items: start;
+      padding: 32px 0; border-bottom: 1px solid var(--border-light);
+      text-decoration: none;
+    }
+    .article-card:last-of-type { border-bottom: none; }
+
+    .card-tag {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      color: var(--gold-dark); background: var(--gold-bg);
+      padding: 3px 9px; border-radius: 4px;
+      letter-spacing: 0.04em; margin-bottom: 10px;
+    }
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; font-weight: 700;
+      color: var(--text); line-height: 1.25;
+      margin-bottom: 10px; transition: color 0.15s;
+    }
+    .article-card:hover .card-title { color: var(--gold-dark); }
+    .card-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
+    .card-meta { font-size: 0.8rem; color: var(--dim); display: flex; gap: 14px; }
+
+    .card-arrow { color: var(--gold); font-size: 1.4rem; margin-top: 6px; transition: transform 0.15s; }
+    .article-card:hover .card-arrow { transform: translateX(4px); }
+
+    .cta-block {
+      background: #141414; border: 1px solid #2a2a2a;
+      padding: 44px 36px; text-align: center;
+      margin: 48px 0 0; border-radius: 8px;
+    }
+    .cta-block h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem; font-weight: 700;
+      color: #fff; margin-bottom: 10px;
+    }
+    .cta-block p { color: #888; font-size: 0.95rem; margin-bottom: 24px; }
+    .btn-gold {
+      display: inline-block; background: var(--gold); color: #000;
+      font-size: 0.9rem; font-weight: 600; padding: 0.75rem 1.8rem;
+      border-radius: 4px; text-decoration: none; transition: opacity 0.15s;
+    }
+    .btn-gold:hover { opacity: 0.85; }
+
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 32px 48px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.8rem; color: var(--dim); flex-wrap: wrap; gap: 10px;
+    }
+    footer a { color: var(--dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem; } .nav-links { display: none; }
+      .page-header, .articles { padding: 0 20px; }
+      .page-header { margin-top: 40px; }
+      .article-card { grid-template-columns: 1fr; }
+      .card-arrow { display: none; }
+      footer { padding: 24px 20px; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://dvsocial.nl" class="nav-logo">DV.Social</a>
+  <ul class="nav-links">
+    <li><a href="https://dvsocial.nl/#diensten">Diensten</a></li>
+    <li><a href="https://dvsocial.nl/#scan">Gratis scan</a></li>
+    <li><a href="https://dvsocial.nl/#over">Over ons</a></li>
+    <li><a href="/blog" class="active">Blog</a></li>
+    <li><a href="https://dvsocial.nl/#contact">Contact</a></li>
+    <li><a href="https://ai-compliance-check.nl" class="nav-cta">Doe de scan →</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <p class="eyebrow">Blog</p>
+  <h1>EU AI Act — uitleg zonder gedoe</h1>
+  <p class="page-lead">Praktische artikelen over de EU AI Act voor Nederlandse ondernemers. Wat de wet betekent, wat de boetes zijn, en wat je nu moet doen.</p>
+</header>
+
+<main class="articles">
+  <hr class="divider">
+
+  <a href="/blog/eu-ai-act-hr-directeuren" class="article-card">
+    <div>
+      <span class="card-tag">HR</span>
+      <h2 class="card-title">EU AI Act voor HR-directeuren: wat is jouw persoonlijke aansprakelijkheid?</h2>
+      <p class="card-desc">CV-screening, beoordelingssoftware, prestatiemonitoring — de meeste HR-tools zijn hoog-risico AI. Wat de wet van jou verwacht en hoe je jezelf beschermt.</p>
+      <div class="card-meta">
+        <span>Danny Verbeek</span>
+        <span>17 maart 2026</span>
+        <span>8 min leestijd</span>
+      </div>
+    </div>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <a href="/blog/eu-ai-act-zorgsector" class="article-card">
+    <div>
+      <span class="card-tag">Zorg</span>
+      <h2 class="card-title">EU AI Act voor de zorgsector: welke AI-systemen vallen onder hoog-risico?</h2>
+      <p class="card-desc">Van diagnostiek-AI tot triagemodellen — de zorgsector heeft volop hoog-risico systemen. Wat zijn de verplichtingen en hoe verhoudt de AI Act zich tot de MDR?</p>
+      <div class="card-meta">
+        <span>Danny Verbeek</span>
+        <span>17 maart 2026</span>
+        <span>9 min leestijd</span>
+      </div>
+    </div>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <a href="/blog/eu-ai-act-staffing-uitzendbureaus" class="article-card">
+    <div>
+      <span class="card-tag">Staffing</span>
+      <h2 class="card-title">EU AI Act voor staffing en uitzendbureaus: wat verandert er voor jou?</h2>
+      <p class="card-desc">Matching-algoritmes, CV-screening, kandidaatscores — de staffingsector draait op AI. Ben jij gebruiker of aanbieder? En wat zijn de verplichtingen voor jouw bureau?</p>
+      <div class="card-meta">
+        <span>Danny Verbeek</span>
+        <span>17 maart 2026</span>
+        <span>8 min leestijd</span>
+      </div>
+    </div>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <a href="/blog/menselijk-toezichtprotocol" class="article-card">
+    <div>
+      <span class="card-tag">Compliance</span>
+      <h2 class="card-title">Wat is een menselijk toezichtprotocol en hoe stel je er één op?</h2>
+      <p class="card-desc">De EU AI Act verplicht menselijk toezicht op hoog-risico AI. Wat moet er in het protocol staan, wie is de toezichthouder en hoe documenteer je het correct?</p>
+      <div class="card-meta">
+        <span>Danny Verbeek</span>
+        <span>17 maart 2026</span>
+        <span>7 min leestijd</span>
+      </div>
+    </div>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <a href="/blog/eu-ai-act-deadline" class="article-card">
+    <div>
+      <span class="card-tag">Deadline</span>
+      <h2 class="card-title">De EU AI Act deadline: wat moet je doen voor 2 augustus 2026?</h2>
+      <p class="card-desc">Minder dan vijf maanden. Dat is wat Nederlandse MKB-bedrijven nog hebben. Een concreet 3-fasen actieplan — inclusief live countdown.</p>
+      <div class="card-meta">
+        <span>Danny Verbeek</span>
+        <span>17 maart 2026</span>
+        <span>9 min leestijd</span>
+      </div>
+    </div>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <a href="/blog/eu-ai-act-boetes" class="article-card">
+    <div>
+      <span class="card-tag">Sancties</span>
+      <h2 class="card-title">EU AI Act boetes: wat zijn de sancties voor jouw bedrijf?</h2>
+      <p class="card-desc">Tot €35 miljoen of 7% van je wereldwijde omzet. Welke boetes gelden, hoe worden ze bepaald, en wat zijn de verzachtende factoren?</p>
+      <div class="card-meta">
+        <span>Danny Verbeek</span>
+        <span>17 maart 2026</span>
+        <span>7 min leestijd</span>
+      </div>
+    </div>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <a href="/blog/wat-is-de-eu-ai-act" class="article-card">
+    <div>
+      <span class="card-tag">Uitleg</span>
+      <h2 class="card-title">Wat is de EU AI Act?</h2>
+      <p class="card-desc">De eerste AI-wet ter wereld. Wat zijn de vier risicocategorieën, welke systemen vallen eronder, en wat betekent dit voor jou als ondernemer?</p>
+      <div class="card-meta">
+        <span>Danny Verbeek</span>
+        <span>17 maart 2026</span>
+        <span>8 min leestijd</span>
+      </div>
+    </div>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <div class="cta-block">
+    <h2>Weet in 9 minuten waar jij staat</h2>
+    <p>Gratis risicoscan — geen e-mail nodig, geen verplichtingen.</p>
+    <a href="https://ai-compliance-check.nl" class="btn-gold">Start de gratis scan →</a>
+  </div>
+</main>
+
+<footer>
+  <a href="https://dvsocial.nl" style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--gold);text-decoration:none;">DV.Social</a>
+  <span>© 2026 DV Social · KVK 96576545 · <a href="mailto:danny@dvsocial.nl">danny@dvsocial.nl</a></span>
+</footer>
+
+</body>
+</html>

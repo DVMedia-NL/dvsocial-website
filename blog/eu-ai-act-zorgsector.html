@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EU AI Act voor de zorgsector: welke AI-systemen vallen onder hoog-risico? | DV Social</title>
+  <meta name="description" content="De zorgsector gebruikt volop AI — van diagnostiek tot roostering. Welke systemen zijn hoog-risico onder de EU AI Act en wat moet je doen voor 2 augustus 2026?">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dvsocial.nl/blog/eu-ai-act-zorgsector">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"EU AI Act voor de zorgsector: welke AI-systemen vallen onder hoog-risico?","author":{"@type":"Person","name":"Danny Verbeek","worksFor":{"@type":"Organization","name":"DV Social","url":"https://dvsocial.nl"}},"publisher":{"@type":"Organization","name":"DV Social","url":"https://dvsocial.nl"},"datePublished":"2026-03-17","mainEntityOfPage":"https://dvsocial.nl/blog/eu-ai-act-zorgsector","inLanguage":"nl"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAFAF8; --white: #FFFFFF; --border-light: #E5E3DC;
+      --text: #1A1A1A; --muted: #6B6B6B; --dim: #A8A8A8;
+      --gold: #C9A84C; --gold-bg: #F7F0DC; --gold-dark: #7A5F0A;
+      --surface: #F2F0EA;
+      --nav-bg: rgba(10,10,10,0.95); --nav-border: #2a2a2a; --nav-muted: #888;
+      --danger: #C03030; --danger-bg: #FDEAEA;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--nav-border); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--nav-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; font-family: 'Inter', sans-serif; }
+    .nav-links a:hover { color: #e0e0e0; }
+    .nav-cta { background: var(--gold); color: #000 !important; padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: 600; font-size: 0.85rem !important; }
+
+    .hero { max-width: 720px; margin: 64px auto 48px; padding: 0 24px; }
+    .breadcrumb { font-size: 0.75rem; color: var(--dim); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--dim); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 6px; }
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; color: var(--gold-dark); background: var(--gold-bg); padding: 3px 10px; border-radius: 4px; letter-spacing: 0.04em; margin-bottom: 16px; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; color: var(--text); margin-bottom: 16px; }
+    .lead { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 24px; }
+    .meta { display: flex; gap: 16px; font-size: 0.8rem; color: var(--dim); padding-top: 16px; border-top: 1px solid var(--border-light); flex-wrap: wrap; }
+    .meta strong { color: var(--muted); font-weight: 500; }
+
+    .divider { max-width: 720px; margin: 0 auto 48px; padding: 0 24px; border: none; border-top: 1px solid var(--border-light); }
+
+    article { max-width: 720px; margin: 0 auto; padding: 0 24px 96px; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; color: var(--text); margin: 48px 0 14px; line-height: 1.2; }
+    h3 { font-size: 0.75rem; font-weight: 600; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin: 28px 0 10px; }
+    p { margin-bottom: 16px; font-size: 0.95rem; }
+    a { color: var(--gold-dark); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color 0.15s; }
+    a:hover { text-decoration-color: var(--gold); }
+    strong { font-weight: 600; }
+    ol, ul { margin: 0 0 16px 20px; }
+    ol li, ul li { margin-bottom: 8px; font-size: 0.95rem; }
+
+    .highlight { background: var(--gold-bg); border-left: 3px solid var(--gold); padding: 16px 20px; margin: 24px 0; border-radius: 0 6px 6px 0; }
+    .highlight p { margin-bottom: 0; font-size: 0.9rem; }
+    .danger-box { background: var(--danger-bg); border-left: 3px solid var(--danger); padding: 16px 20px; margin: 24px 0; border-radius: 0 6px 6px 0; }
+    .danger-box p { margin-bottom: 0; font-size: 0.9rem; }
+
+    .risk-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85rem; background: var(--white); border-radius: 8px; overflow: hidden; border: 1px solid var(--border-light); }
+    .risk-table th { text-align: left; padding: 10px 14px; font-size: 0.72rem; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; background: var(--surface); border-bottom: 1px solid var(--border-light); }
+    .risk-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-light); vertical-align: top; }
+    .risk-table tr:last-child td { border-bottom: none; }
+    .risk-table tbody tr:hover td { background: var(--bg); }
+
+    .badge { display: inline-block; font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; letter-spacing: 0.04em; }
+    .badge-high { background: var(--danger-bg); color: var(--danger); }
+    .badge-mid { background: #FEF3E2; color: #B45309; }
+    .badge-low { background: #ECFDF5; color: #065F46; }
+
+    .cta-block { background: #141414; border: 1px solid #2a2a2a; padding: 44px 36px; text-align: center; margin: 52px 0; border-radius: 8px; }
+    .cta-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: #fff; text-transform: none; letter-spacing: 0; margin-bottom: 10px; }
+    .cta-block p { color: #888; font-size: 0.9rem; margin-bottom: 24px; }
+    .btn-gold { display: inline-block; background: var(--gold); color: #000; font-size: 0.9rem; font-weight: 600; padding: 0.75rem 1.8rem; border-radius: 4px; text-decoration: none; transition: opacity 0.15s; }
+    .btn-gold:hover { opacity: 0.85; }
+
+    .related { border-top: 1px solid var(--border-light); padding-top: 36px; margin-top: 52px; }
+    .related-label { font-size: 0.72rem; font-weight: 700; color: var(--dim); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--white); border: 1px solid var(--border-light); border-radius: 6px; text-decoration: none; transition: border-color 0.15s; }
+    .related-link:hover { border-color: var(--gold); }
+    .related-link-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text); }
+    .related-link-arrow { color: var(--gold); margin-left: 12px; flex-shrink: 0; }
+
+    footer { border-top: 1px solid var(--border-light); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--dim); flex-wrap: wrap; gap: 10px; }
+    footer a { color: var(--dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem; } .nav-links { display: none; }
+      .hero, article { padding: 0 20px; } .hero { margin-top: 40px; }
+      h1 { font-size: 1.8rem; }
+      footer { padding: 24px 20px; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://dvsocial.nl" class="nav-logo">DV.Social</a>
+  <ul class="nav-links">
+    <li><a href="https://dvsocial.nl/#diensten">Diensten</a></li>
+    <li><a href="https://dvsocial.nl/#scan">Gratis scan</a></li>
+    <li><a href="https://dvsocial.nl/#over">Over ons</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="https://dvsocial.nl/#contact">Contact</a></li>
+    <li><a href="https://ai-compliance-check.nl" class="nav-cta">Doe de scan →</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://dvsocial.nl">Home</a> <span>›</span>
+    <a href="/blog">Blog</a> <span>›</span>
+    EU AI Act voor de zorgsector
+  </nav>
+  <span class="tag">Zorg</span>
+  <h1>EU AI Act voor de zorgsector: welke AI-systemen vallen onder hoog-risico?</h1>
+  <p class="lead">Ziekenhuizen, klinieken en zorgorganisaties gebruiken steeds meer AI — van beeldanalyse tot triage-algoritmes. Welke systemen zijn hoog-risico, wat zijn de verplichtingen, en wat doet de overlap met MDR?</p>
+  <div class="meta">
+    <strong>Danny Verbeek — EU AI Act Specialist</strong>
+    <span>17 maart 2026</span>
+    <span>9 min leestijd</span>
+  </div>
+</header>
+
+<hr class="divider">
+
+<article>
+  <p>De zorgsector staat voor een dubbele compliance-uitdaging. Veel medische AI-systemen vallen al onder de EU Medical Device Regulation (MDR) — maar de EU AI Act voegt daar een tweede laag verplichtingen aan toe. En voor AI die niet als medisch hulpmiddel is geclassificeerd maar toch klinische beslissingen ondersteunt, is de AI Act soms het enige toetsingskader.</p>
+
+  <div class="highlight">
+    <p><strong>Samenvatting voor zorgbestuurders:</strong> vrijwel alle AI die invloed heeft op diagnose, behandeling, triage of patiëntbeheer valt als hoog-risico onder de EU AI Act. Volledige handhaving start op <strong>2 augustus 2026</strong>.</p>
+  </div>
+
+  <h2>Hoog-risico AI in de zorg: de categorieën</h2>
+  <p>Bijlage III van de EU AI Act noemt expliciete categorieën die als hoog-risico worden aangemerkt. In de zorgsector zijn dat primair:</p>
+
+  <table class="risk-table">
+    <thead>
+      <tr><th>AI-toepassing</th><th>Voorbeelden in de zorg</th><th>Classificatie</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medische diagnostiek</td>
+        <td>Radiologie-AI, pathologie-analyse, ECG-interpretatie</td>
+        <td><span class="badge badge-high">Hoog-risico</span></td>
+      </tr>
+      <tr>
+        <td>Klinische beslissingsondersteuning</td>
+        <td>Sepsis-voorspellers, medicatieaanbevelingen, triagemodellen op de SEH</td>
+        <td><span class="badge badge-high">Hoog-risico</span></td>
+      </tr>
+      <tr>
+        <td>Risicoklassificatie patiënten</td>
+        <td>Heropname-risicoscores, valrisico-modellen, readmissie-algoritmes</td>
+        <td><span class="badge badge-high">Hoog-risico</span></td>
+      </tr>
+      <tr>
+        <td>Geestelijke gezondheid</td>
+        <td>Suïcidepreventiescreening, burn-outdetectie via tekst of spraak</td>
+        <td><span class="badge badge-high">Hoog-risico</span></td>
+      </tr>
+      <tr>
+        <td>Personeels- en roostersystemen</td>
+        <td>AI-gestuurde personeelsplanning, ziekteverzuimvoorspelling</td>
+        <td><span class="badge badge-mid">Hoog-risico (HR)</span></td>
+      </tr>
+      <tr>
+        <td>Administratieve automatisering</td>
+        <td>Declaratiecontrole, AI-codeertools voor DRG/DBC</td>
+        <td><span class="badge badge-low">Beperkt risico</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>De overlap met de MDR</h2>
+  <p>Wanneer een AI-systeem al als medisch hulpmiddel is gecertificeerd onder de MDR (klasse IIa, IIb of III), gelden er speciale afspraken in de EU AI Act: de conformiteitsbeoordeling mag gedeeltelijk worden samengevoegd. Maar de AI Act-verplichtingen rond transparantie, menselijk toezicht en logging zijn aanvullend — die verdwijnen niet.</p>
+
+  <div class="danger-box">
+    <p><strong>Valkuil:</strong> sommige AI-tools in de zorg zijn aangeschaft als "software" of "beslissingsondersteunend instrument" zonder MDR-classificatie. Als ze toch klinische beslissingen beïnvloeden, vallen ze onder hoog-risico AI Act-verplichtingen — zonder dat de leverancier ooit een conformiteitsverklaring heeft opgesteld.</p>
+  </div>
+
+  <h2>Wat zijn de verplichtingen voor zorgorganisaties?</h2>
+
+  <h3>Risicobeheersysteem per AI-systeem</h3>
+  <p>Voor elk hoog-risico AI-systeem moet een gedocumenteerd risicobeheersysteem worden bijgehouden. In de zorg betekent dit: welke patiëntenpopulaties worden geraakt, wat zijn bekende beperkingen van het model (bias, generaliseerbaarheid), en hoe worden fouten gedetecteerd en gecorrigeerd?</p>
+
+  <h3>Menselijk toezicht — ook bij volledig geautomatiseerde systemen</h3>
+  <p>Een radioloog die een AI-bevinding bevestigt vóór rapportage is een vorm van menselijk toezicht. Maar dit toezicht moet <strong>aantoonbaar en gedocumenteerd</strong> zijn. Een systeem waarbij de AI-uitkomst automatisch in het EPD wordt geschreven zonder review, voldoet niet.</p>
+
+  <h3>Kwaliteitsbeheer en logging</h3>
+  <p>Zorgorganisaties moeten logs bijhouden van AI-beslissingen. Bij klachten, calamiteiten of inspecties moet reconstructie mogelijk zijn: welk model, welke versie, welke input, welke output, wie heeft het beoordeeld?</p>
+
+  <h3>Training van zorgprofessionals</h3>
+  <p>Medewerkers die met hoog-risico AI werken, moeten getraind zijn in de mogelijkheden én beperkingen van het systeem. Blind vertrouwen op AI-uitkomsten is een compliance-risico én een patiëntveiligheidsrisico.</p>
+
+  <h2>Wat als uw leverancier niet voldoet?</h2>
+  <p>Zorgorganisaties zijn als <em>deployers</em> (gebruikers) zelf verantwoordelijk voor naleving van de AI Act. Als uw leverancier geen conformiteitsverklaring, technische documentatie of CE-markering kan overleggen, loopt uw organisatie risico — zelfs als het systeem extern is aangeschaft.</p>
+
+  <p>Praktische stap: stuur uw AI-leveranciers een vragenlijst over hun AI Act-gereedheid. Leveranciers die niet kunnen antwoorden, zijn een signaal dat het systeem niet klaar is voor 2026.</p>
+
+  <h2>Prioriteiten voor zorgorganisaties in 2026</h2>
+  <ol>
+    <li><strong>Inventariseer alle AI-systemen</strong> met klinische impact — ook modules in EPD's en RIS/PACS-systemen.</li>
+    <li><strong>Controleer MDR-status</strong> en bepaal of aanvullende AI Act-compliance nodig is.</li>
+    <li><strong>Vraag leveranciers om documentatie</strong>: conformiteitsverklaring, technische documentatie, registratie in de EU AI-database.</li>
+    <li><strong>Documenteer menselijk toezicht</strong> voor elk hoog-risico systeem.</li>
+    <li><strong>Train betrokken zorgprofessionals</strong> in verantwoord AI-gebruik.</li>
+  </ol>
+
+  <div class="cta-block">
+    <h3>Weet welke AI-systemen in uw zorgorganisatie hoog-risico zijn</h3>
+    <p>Doe de gratis scan en ontvang een persoonlijk risicorapport binnen 3 minuten.</p>
+    <a href="https://ai-compliance-check.nl" class="btn-gold">Start de gratis scan →</a>
+  </div>
+
+  <div class="related">
+    <p class="related-label">Meer lezen</p>
+    <div class="related-links">
+      <a href="/blog/menselijk-toezichtprotocol" class="related-link">
+        <span class="related-link-title">Wat is een menselijk toezichtprotocol en hoe stel je er één op?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="/blog/eu-ai-act-boetes" class="related-link">
+        <span class="related-link-title">EU AI Act boetes: wat zijn de sancties voor jouw bedrijf?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="/blog/wat-is-de-eu-ai-act" class="related-link">
+        <span class="related-link-title">Wat is de EU AI Act? Uitleg voor het Nederlandse MKB</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <a href="https://dvsocial.nl" style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--gold);text-decoration:none;">DV.Social</a>
+  <span>© 2026 DV Social · KVK 96576545 · <a href="mailto:danny@dvsocial.nl">danny@dvsocial.nl</a></span>
+</footer>
+
+</body>
+</html>
