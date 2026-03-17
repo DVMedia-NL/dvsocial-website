@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EU AI Act voor staffing en uitzendbureaus: wat verandert er voor jou? | DV Social</title>
+  <meta name="description" content="Uitzendbureaus en staffingbedrijven gebruiken AI voor matching, screening en planning. Ontdek wat de EU AI Act van jouw organisatie vraagt en wanneer je compliant moet zijn.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dvsocial.nl/blog/eu-ai-act-staffing-uitzendbureaus">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"EU AI Act voor staffing en uitzendbureaus: wat verandert er voor jou?","author":{"@type":"Person","name":"Danny Verbeek","worksFor":{"@type":"Organization","name":"DV Social","url":"https://dvsocial.nl"}},"publisher":{"@type":"Organization","name":"DV Social","url":"https://dvsocial.nl"},"datePublished":"2026-03-17","mainEntityOfPage":"https://dvsocial.nl/blog/eu-ai-act-staffing-uitzendbureaus","inLanguage":"nl"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAFAF8; --white: #FFFFFF; --border-light: #E5E3DC;
+      --text: #1A1A1A; --muted: #6B6B6B; --dim: #A8A8A8;
+      --gold: #C9A84C; --gold-bg: #F7F0DC; --gold-dark: #7A5F0A;
+      --surface: #F2F0EA;
+      --nav-bg: rgba(10,10,10,0.95); --nav-border: #2a2a2a; --nav-muted: #888;
+      --danger: #C03030; --danger-bg: #FDEAEA;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--nav-border); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--nav-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; font-family: 'Inter', sans-serif; }
+    .nav-links a:hover { color: #e0e0e0; }
+    .nav-cta { background: var(--gold); color: #000 !important; padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: 600; font-size: 0.85rem !important; }
+
+    .hero { max-width: 720px; margin: 64px auto 48px; padding: 0 24px; }
+    .breadcrumb { font-size: 0.75rem; color: var(--dim); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--dim); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 6px; }
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; color: var(--gold-dark); background: var(--gold-bg); padding: 3px 10px; border-radius: 4px; letter-spacing: 0.04em; margin-bottom: 16px; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; color: var(--text); margin-bottom: 16px; }
+    .lead { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 24px; }
+    .meta { display: flex; gap: 16px; font-size: 0.8rem; color: var(--dim); padding-top: 16px; border-top: 1px solid var(--border-light); flex-wrap: wrap; }
+    .meta strong { color: var(--muted); font-weight: 500; }
+
+    .divider { max-width: 720px; margin: 0 auto 48px; padding: 0 24px; border: none; border-top: 1px solid var(--border-light); }
+
+    article { max-width: 720px; margin: 0 auto; padding: 0 24px 96px; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; color: var(--text); margin: 48px 0 14px; line-height: 1.2; }
+    h3 { font-size: 0.75rem; font-weight: 600; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin: 28px 0 10px; }
+    p { margin-bottom: 16px; font-size: 0.95rem; }
+    a { color: var(--gold-dark); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color 0.15s; }
+    a:hover { text-decoration-color: var(--gold); }
+    strong { font-weight: 600; }
+    ol, ul { margin: 0 0 16px 20px; }
+    ol li, ul li { margin-bottom: 8px; font-size: 0.95rem; }
+
+    .highlight { background: var(--gold-bg); border-left: 3px solid var(--gold); padding: 16px 20px; margin: 24px 0; border-radius: 0 6px 6px 0; }
+    .highlight p { margin-bottom: 0; font-size: 0.9rem; }
+    .danger-box { background: var(--danger-bg); border-left: 3px solid var(--danger); padding: 16px 20px; margin: 24px 0; border-radius: 0 6px 6px 0; }
+    .danger-box p { margin-bottom: 0; font-size: 0.9rem; }
+
+    .risk-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85rem; background: var(--white); border-radius: 8px; overflow: hidden; border: 1px solid var(--border-light); }
+    .risk-table th { text-align: left; padding: 10px 14px; font-size: 0.72rem; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; background: var(--surface); border-bottom: 1px solid var(--border-light); }
+    .risk-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-light); vertical-align: top; }
+    .risk-table tr:last-child td { border-bottom: none; }
+    .risk-table tbody tr:hover td { background: var(--bg); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .col-card { background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; padding: 20px; }
+    .col-card-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
+    .col-card.as-provider .col-card-label { color: var(--danger); }
+    .col-card.as-user .col-card-label { color: var(--gold-dark); }
+    .col-card ul { margin: 0; padding-left: 16px; }
+    .col-card ul li { font-size: 0.88rem; margin-bottom: 6px; }
+
+    .cta-block { background: #141414; border: 1px solid #2a2a2a; padding: 44px 36px; text-align: center; margin: 52px 0; border-radius: 8px; }
+    .cta-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: #fff; text-transform: none; letter-spacing: 0; margin-bottom: 10px; }
+    .cta-block p { color: #888; font-size: 0.9rem; margin-bottom: 24px; }
+    .btn-gold { display: inline-block; background: var(--gold); color: #000; font-size: 0.9rem; font-weight: 600; padding: 0.75rem 1.8rem; border-radius: 4px; text-decoration: none; transition: opacity 0.15s; }
+    .btn-gold:hover { opacity: 0.85; }
+
+    .related { border-top: 1px solid var(--border-light); padding-top: 36px; margin-top: 52px; }
+    .related-label { font-size: 0.72rem; font-weight: 700; color: var(--dim); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--white); border: 1px solid var(--border-light); border-radius: 6px; text-decoration: none; transition: border-color 0.15s; }
+    .related-link:hover { border-color: var(--gold); }
+    .related-link-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text); }
+    .related-link-arrow { color: var(--gold); margin-left: 12px; flex-shrink: 0; }
+
+    footer { border-top: 1px solid var(--border-light); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--dim); flex-wrap: wrap; gap: 10px; }
+    footer a { color: var(--dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem; } .nav-links { display: none; }
+      .hero, article { padding: 0 20px; } .hero { margin-top: 40px; }
+      h1 { font-size: 1.8rem; } .two-col { grid-template-columns: 1fr; }
+      footer { padding: 24px 20px; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://dvsocial.nl" class="nav-logo">DV.Social</a>
+  <ul class="nav-links">
+    <li><a href="https://dvsocial.nl/#diensten">Diensten</a></li>
+    <li><a href="https://dvsocial.nl/#scan">Gratis scan</a></li>
+    <li><a href="https://dvsocial.nl/#over">Over ons</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="https://dvsocial.nl/#contact">Contact</a></li>
+    <li><a href="https://ai-compliance-check.nl" class="nav-cta">Doe de scan →</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://dvsocial.nl">Home</a> <span>›</span>
+    <a href="/blog">Blog</a> <span>›</span>
+    EU AI Act voor staffing en uitzendbureaus
+  </nav>
+  <span class="tag">Staffing</span>
+  <h1>EU AI Act voor staffing en uitzendbureaus: wat verandert er voor jou?</h1>
+  <p class="lead">Matching-algoritmes, CV-screening, beschikbaarheidsplanning — de staffingsector draait op AI. De EU AI Act classificeert het merendeel hiervan als hoog-risico. Wat betekent dat voor jouw bureau?</p>
+  <div class="meta">
+    <strong>Danny Verbeek — EU AI Act Specialist</strong>
+    <span>17 maart 2026</span>
+    <span>8 min leestijd</span>
+  </div>
+</header>
+
+<hr class="divider">
+
+<article>
+  <p>Uitzendbureaus en staffingbedrijven bevinden zich in een bijzondere positie onder de EU AI Act. Enerzijds zijn ze <em>gebruiker</em> van AI die ze van softwareleveranciers afnemen — denk aan een ATS met geautomatiseerde shortlisting. Anderzijds bieden sommige bureaus zelf geautomatiseerde matchingdiensten aan opdrachtgevers, waardoor ze ook als <em>aanbieder</em> worden gezien.</p>
+
+  <div class="danger-box">
+    <p><strong>Dubbele rol:</strong> als jouw bureau een eigen matchingplatform of kandidaatscoremodel heeft dat je aan klanten levert, gelden de zwaarste verplichtingen van de EU AI Act — inclusief CE-markering, technische documentatie en registratie in de EU-database.</p>
+  </div>
+
+  <h2>Welke AI-systemen zijn hoog-risico voor de staffingsector?</h2>
+
+  <table class="risk-table">
+    <thead>
+      <tr><th>AI-toepassing</th><th>Typisch gebruik in staffing</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>CV-screening en -rangschikking</td><td>Automatisch filteren van kandidaten op basis van profiel en vacaturetekst</td></tr>
+      <tr><td>Kandidaat-matching</td><td>Algoritmes die kandidaten aan opdrachten koppelen op basis van vaardigheden, beschikbaarheid en historische data</td></tr>
+      <tr><td>Betrouwbaarheids- of geschiktheidsscore</td><td>Reputatiescores op basis van eerdere opdrachten, reviews, no-show-historie</td></tr>
+      <tr><td>Beschikbaarheids- en planningsmodellen</td><td>AI-gestuurde roostergeneratie waarbij kandidaten automatisch worden ingepland</td></tr>
+      <tr><td>Screeningsgesprekken via AI</td><td>Chatbots of video-analyse die sollicitanten beoordelen vóór menselijke review</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Aanbieder of gebruiker: wat ben jij?</h2>
+  <p>De AI Act maakt een belangrijk onderscheid:</p>
+
+  <div class="two-col">
+    <div class="col-card as-provider">
+      <div class="col-card-label">Als aanbieder (provider)</div>
+      <ul>
+        <li>Je hebt een eigen matching- of scoringmodel ontwikkeld</li>
+        <li>Je levert het als dienst aan opdrachtgevers of andere bureaus</li>
+        <li>Verplichtingen: CE-markering, conformiteitsverklaring, EU-database registratie, technische documentatie</li>
+      </ul>
+    </div>
+    <div class="col-card as-user">
+      <div class="col-card-label">Als gebruiker (deployer)</div>
+      <ul>
+        <li>Je gebruikt AI van een leverancier (ATS, matchingsoftware)</li>
+        <li>Je past het toe in je eigen wervings- en plaatsingsproces</li>
+        <li>Verplichtingen: menselijk toezicht, transparantie naar kandidaten, logging, risicobeheersysteem</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Wat verandert er concreet voor jouw bureau?</h2>
+
+  <h3>Transparantie naar kandidaten</h3>
+  <p>Kandidaten moeten worden geïnformeerd wanneer AI een rol speelt in hun beoordeling of plaatsing. Dat betekent: in je kandidaatcommunicatie, je privacyverklaring én je intakeprocedure moet helder staan dat geautomatiseerde beslissingsondersteuning wordt ingezet.</p>
+
+  <h3>Menselijk toezicht verplicht</h3>
+  <p>Een consultant die een AI-aanbeveling "gewoon overneemt" zonder werkelijke toetsing voldoet niet. Er moet een aantoonbare menselijke beoordeling zijn — en die moet worden gedocumenteerd. Wie heeft de aanbeveling gezien? Heeft hij of zij die bevestigd of overschreven?</p>
+
+  <h3>Geen discriminerende algoritmes</h3>
+  <p>Algoritmes die op basis van postcode, naam, leeftijd of andere beschermde kenmerken indirect discrimineren, zijn verboden. De AI Act verplicht leveranciers tot bias-testing — maar als gebruiker ben jij verantwoordelijk voor het monitoren van uitkomsten in jouw specifieke context.</p>
+
+  <div class="highlight">
+    <p><strong>Praktijkvoorbeeld:</strong> een bureau merkt dat het matching-algoritme vrouwen stelselmatig lager scoort voor technische functies. Ook al is het algoritme van de leverancier, de <em>deployer</em> (het bureau) is aansprakelijk voor discriminerende uitkomsten in zijn eigen processen.</p>
+  </div>
+
+  <h3>Logging en audittrail</h3>
+  <p>Houd bij welk systeem, welke versie en welke aanbeveling heeft geleid tot welke plaatsingsbeslissing. Dit is niet alleen een AI Act-vereiste — het beschermt je ook bij klachten van kandidaten of opdrachtgevers.</p>
+
+  <h2>Wat moet je nu regelen?</h2>
+  <ol>
+    <li><strong>Inventariseer alle AI-tools</strong> in je wervings-, matchings- en plaatsingsproces.</li>
+    <li><strong>Bepaal je rol</strong> per systeem: ben je gebruiker of aanbieder?</li>
+    <li><strong>Vraag leveranciers om documentatie</strong>: conformiteitsverklaring, bias-testrapport, technische documentatie.</li>
+    <li><strong>Update je kandidaatcommunicatie</strong>: vermeld actief het gebruik van AI.</li>
+    <li><strong>Stel een toezichtprotocol in</strong>: wie reviewt AI-aanbevelingen, hoe en wanneer?</li>
+    <li><strong>Monitor op bias</strong>: analyseer regelmatig of je plaatsingsresultaten afwijken voor beschermde groepen.</li>
+  </ol>
+
+  <div class="cta-block">
+    <h3>Weet welke AI-tools in jouw bureau hoog-risico zijn</h3>
+    <p>Doe de gratis scan en ontvang binnen 3 minuten een persoonlijk risicorapport.</p>
+    <a href="https://ai-compliance-check.nl" class="btn-gold">Start de gratis scan →</a>
+  </div>
+
+  <div class="related">
+    <p class="related-label">Meer lezen</p>
+    <div class="related-links">
+      <a href="/blog/eu-ai-act-hr-directeuren" class="related-link">
+        <span class="related-link-title">EU AI Act voor HR-directeuren: wat is jouw persoonlijke aansprakelijkheid?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="/blog/menselijk-toezichtprotocol" class="related-link">
+        <span class="related-link-title">Wat is een menselijk toezichtprotocol en hoe stel je er één op?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="/blog/eu-ai-act-boetes" class="related-link">
+        <span class="related-link-title">EU AI Act boetes: wat zijn de sancties voor jouw bedrijf?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <a href="https://dvsocial.nl" style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--gold);text-decoration:none;">DV.Social</a>
+  <span>© 2026 DV Social · KVK 96576545 · <a href="mailto:danny@dvsocial.nl">danny@dvsocial.nl</a></span>
+</footer>
+
+</body>
+</html>

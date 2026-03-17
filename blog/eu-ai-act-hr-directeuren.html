@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EU AI Act voor HR-directeuren: wat is jouw persoonlijke aansprakelijkheid? | DV Social</title>
+  <meta name="description" content="Als HR-directeur ben je verantwoordelijk voor AI in werving en beoordeling. Ontdek wat de EU AI Act concreet van jou verwacht en hoe je persoonlijke aansprakelijkheid vermijdt.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dvsocial.nl/blog/eu-ai-act-hr-directeuren">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"EU AI Act voor HR-directeuren: wat is jouw persoonlijke aansprakelijkheid?","author":{"@type":"Person","name":"Danny Verbeek","worksFor":{"@type":"Organization","name":"DV Social","url":"https://dvsocial.nl"}},"publisher":{"@type":"Organization","name":"DV Social","url":"https://dvsocial.nl"},"datePublished":"2026-03-17","mainEntityOfPage":"https://dvsocial.nl/blog/eu-ai-act-hr-directeuren","inLanguage":"nl"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAFAF8; --white: #FFFFFF; --border-light: #E5E3DC;
+      --text: #1A1A1A; --muted: #6B6B6B; --dim: #A8A8A8;
+      --gold: #C9A84C; --gold-bg: #F7F0DC; --gold-dark: #7A5F0A;
+      --surface: #F2F0EA;
+      --nav-bg: rgba(10,10,10,0.95); --nav-border: #2a2a2a; --nav-muted: #888;
+      --danger: #C03030; --danger-bg: #FDEAEA;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--nav-border); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--nav-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; font-family: 'Inter', sans-serif; }
+    .nav-links a:hover { color: #e0e0e0; }
+    .nav-cta { background: var(--gold); color: #000 !important; padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: 600; font-size: 0.85rem !important; }
+
+    .hero { max-width: 720px; margin: 64px auto 48px; padding: 0 24px; }
+    .breadcrumb { font-size: 0.75rem; color: var(--dim); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--dim); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 6px; }
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; color: var(--gold-dark); background: var(--gold-bg); padding: 3px 10px; border-radius: 4px; letter-spacing: 0.04em; margin-bottom: 16px; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; color: var(--text); margin-bottom: 16px; }
+    .lead { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 24px; }
+    .meta { display: flex; gap: 16px; font-size: 0.8rem; color: var(--dim); padding-top: 16px; border-top: 1px solid var(--border-light); flex-wrap: wrap; }
+    .meta strong { color: var(--muted); font-weight: 500; }
+
+    .divider { max-width: 720px; margin: 0 auto 48px; padding: 0 24px; border: none; border-top: 1px solid var(--border-light); }
+
+    article { max-width: 720px; margin: 0 auto; padding: 0 24px 96px; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; color: var(--text); margin: 48px 0 14px; line-height: 1.2; }
+    h3 { font-size: 0.75rem; font-weight: 600; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin: 28px 0 10px; }
+    p { margin-bottom: 16px; font-size: 0.95rem; }
+    a { color: var(--gold-dark); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color 0.15s; }
+    a:hover { text-decoration-color: var(--gold); }
+    strong { font-weight: 600; }
+    ol, ul { margin: 0 0 16px 20px; }
+    ol li, ul li { margin-bottom: 8px; font-size: 0.95rem; }
+
+    .highlight { background: var(--gold-bg); border-left: 3px solid var(--gold); padding: 16px 20px; margin: 24px 0; border-radius: 0 6px 6px 0; }
+    .highlight p { margin-bottom: 0; font-size: 0.9rem; }
+    .danger-box { background: var(--danger-bg); border-left: 3px solid var(--danger); padding: 16px 20px; margin: 24px 0; border-radius: 0 6px 6px 0; }
+    .danger-box p { margin-bottom: 0; font-size: 0.9rem; }
+
+    .risk-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85rem; background: var(--white); border-radius: 8px; overflow: hidden; border: 1px solid var(--border-light); }
+    .risk-table th { text-align: left; padding: 10px 14px; font-size: 0.72rem; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; background: var(--surface); border-bottom: 1px solid var(--border-light); }
+    .risk-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-light); vertical-align: top; }
+    .risk-table tr:last-child td { border-bottom: none; }
+    .risk-table tbody tr:hover td { background: var(--bg); }
+
+    .checklist { list-style: none; margin: 0 0 16px 0; }
+    .checklist li { font-size: 0.95rem; padding: 10px 14px; border-bottom: 1px solid var(--border-light); display: flex; gap: 12px; align-items: flex-start; }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist-wrap { background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; overflow: hidden; margin: 20px 0; }
+    .check-icon { color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    .cta-block { background: #141414; border: 1px solid #2a2a2a; padding: 44px 36px; text-align: center; margin: 52px 0; border-radius: 8px; }
+    .cta-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: #fff; text-transform: none; letter-spacing: 0; margin-bottom: 10px; }
+    .cta-block p { color: #888; font-size: 0.9rem; margin-bottom: 24px; }
+    .btn-gold { display: inline-block; background: var(--gold); color: #000; font-size: 0.9rem; font-weight: 600; padding: 0.75rem 1.8rem; border-radius: 4px; text-decoration: none; transition: opacity 0.15s; }
+    .btn-gold:hover { opacity: 0.85; }
+
+    .related { border-top: 1px solid var(--border-light); padding-top: 36px; margin-top: 52px; }
+    .related-label { font-size: 0.72rem; font-weight: 700; color: var(--dim); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--white); border: 1px solid var(--border-light); border-radius: 6px; text-decoration: none; transition: border-color 0.15s; }
+    .related-link:hover { border-color: var(--gold); }
+    .related-link-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text); }
+    .related-link-arrow { color: var(--gold); margin-left: 12px; flex-shrink: 0; }
+
+    footer { border-top: 1px solid var(--border-light); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--dim); flex-wrap: wrap; gap: 10px; }
+    footer a { color: var(--dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem; } .nav-links { display: none; }
+      .hero, article { padding: 0 20px; } .hero { margin-top: 40px; }
+      h1 { font-size: 1.8rem; }
+      footer { padding: 24px 20px; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://dvsocial.nl" class="nav-logo">DV.Social</a>
+  <ul class="nav-links">
+    <li><a href="https://dvsocial.nl/#diensten">Diensten</a></li>
+    <li><a href="https://dvsocial.nl/#scan">Gratis scan</a></li>
+    <li><a href="https://dvsocial.nl/#over">Over ons</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="https://dvsocial.nl/#contact">Contact</a></li>
+    <li><a href="https://ai-compliance-check.nl" class="nav-cta">Doe de scan →</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://dvsocial.nl">Home</a> <span>›</span>
+    <a href="/blog">Blog</a> <span>›</span>
+    EU AI Act voor HR-directeuren
+  </nav>
+  <span class="tag">HR</span>
+  <h1>EU AI Act voor HR-directeuren: wat is jouw persoonlijke aansprakelijkheid?</h1>
+  <p class="lead">De EU AI Act maakt HR-directeuren persoonlijk verantwoordelijk voor AI-systemen in werving, beoordeling en personeelsbeheer. Wat dat in de praktijk betekent — en hoe je jezelf beschermt.</p>
+  <div class="meta">
+    <strong>Danny Verbeek — EU AI Act Specialist</strong>
+    <span>17 maart 2026</span>
+    <span>8 min leestijd</span>
+  </div>
+</header>
+
+<hr class="divider">
+
+<article>
+  <p>Als HR-directeur beslis je dagelijks over de inzet van tools die CV's filteren, kandidaten scoren, prestaties monitoren of verzuim voorspellen. Wat veel HR-professionals nog niet weten: <strong>de EU AI Act classificeert de meeste van deze systemen als hoog-risico AI</strong> — met concrete verplichtingen die direct op jouw functie neerkomen.</p>
+
+  <div class="danger-box">
+    <p><strong>Deadline nadert:</strong> vanaf <strong>2 augustus 2026</strong> geldt volledige handhaving. Voor hoog-risico AI in HR moet je organisatie dan aantoonbaar compliant zijn — of jij riskeert persoonlijk aangesproken te worden.</p>
+  </div>
+
+  <h2>Welke HR-systemen zijn hoog-risico?</h2>
+  <p>De EU AI Act (Bijlage III) noemt expliciet de volgende HR-toepassingen als hoog-risico:</p>
+
+  <table class="risk-table">
+    <thead>
+      <tr><th>AI-toepassing</th><th>Voorbeelden</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Werving en selectie</td><td>CV-screening, kandidaatrangschikking, chatbots die sollicitanten beoordelen</td></tr>
+      <tr><td>Beoordelingssystemen</td><td>Prestatiesoftware met AI-scoring, 360°-feedbacktools met geautomatiseerde conclusies</td></tr>
+      <tr><td>Promotie en ontslag</td><td>Succesvoorspellers voor intern talent, retentierisico-algoritmes</td></tr>
+      <tr><td>Taakverdeling en monitoring</td><td>Werkplanning via AI, productiviteitsmonitoring, keystroke analytics</td></tr>
+    </tbody>
+  </table>
+
+  <p>Let op: het gaat niet alleen om AI die je zelf hebt aangeschaft als "AI-systeem". Ook modules in bestaande HR-pakketten — zoals automatische CV-parsers in een ATS, of prestatiescorecards in een HRMS — kunnen onder deze definitie vallen.</p>
+
+  <h2>Wat zijn de verplichtingen voor jouw organisatie?</h2>
+
+  <h3>1 — Risicobeheersysteem</h3>
+  <p>Je moet voor elk hoog-risico AI-systeem een gedocumenteerd risicobeheersysteem bijhouden. Dit betekent niet een eenmalige inventarisatie, maar een <strong>levend document</strong> dat regelmatig wordt bijgewerkt en de mogelijke nadelige gevolgen voor kandidaten en medewerkers beschrijft.</p>
+
+  <h3>2 — Menselijk toezicht</h3>
+  <p>Er moet altijd een bevoegde menselijke medewerker zijn die AI-beslissingen begrijpt, kan overrulen en verantwoording kan afleggen. Een automatisch gegenereerde aanbeveling die zonder menselijke toetsing wordt doorgevoerd, is in strijd met de wet.</p>
+
+  <h3>3 — Transparantie naar betrokkenen</h3>
+  <p>Kandidaten en medewerkers moeten worden geïnformeerd wanneer AI een significante rol speelt in beslissingen over hen. Dit moet actief worden gecommuniceerd — het volstaat niet om het in de kleine lettertjes te zetten.</p>
+
+  <h3>4 — Logging en documentatie</h3>
+  <p>AI-beslissingen moeten worden gelogd zodat achteraf reconstructie mogelijk is. Toezichthouders kunnen om inzage vragen; je moet kunnen aantonen <em>welk systeem</em>, <em>op welk moment</em>, <em>op basis van welke data</em> tot welke uitkomst is gekomen.</p>
+
+  <h2>Wat is jouw persoonlijke aansprakelijkheid?</h2>
+
+  <div class="highlight">
+    <p><strong>Kernpunt:</strong> als HR-directeur ben je in de meeste organisaties de functioneel verantwoordelijke voor het inzetten en beheren van HR-technologie. De EU AI Act legt de nalevingsplicht bij de <em>gebruiker</em> van het systeem — dat is jouw organisatie, en concreet de persoon die het systeem aanschaft en inzet.</p>
+  </div>
+
+  <p>Dat brengt drie vormen van persoonlijk risico met zich mee:</p>
+
+  <ul>
+    <li><strong>Arbeidsrechtelijke aansprakelijkheid:</strong> wanneer een sollicitant of medewerker kan aantonen dat een AI-beslissing discriminerend of onrechtmatig was, kan hij of zij jouw organisatie aanspreken — en intern wordt dat teruggeleid naar de verantwoordelijke functionaris.</li>
+    <li><strong>Bestuursrechtelijke handhaving:</strong> toezichthouders kunnen bij een inspectie of klacht de verantwoordelijke persoon horen. Een onvolledig dossier of ontbrekende documentatie weegt zwaar.</li>
+    <li><strong>Reputatierisico:</strong> publieke uitspraken van een toezichthouder over niet-compliant AI-gebruik in een HR-context kunnen carrière en werkgever schaden.</li>
+  </ul>
+
+  <h2>Wat kun je nú doen?</h2>
+
+  <div class="checklist-wrap">
+    <ul class="checklist">
+      <li><span class="check-icon">→</span><span><strong>Maak een AI-inventaris.</strong> Zet alle tools op een rij waarbij AI een rol speelt in beslissingen over mensen — inclusief modules in bestaande pakketten.</span></li>
+      <li><span class="check-icon">→</span><span><strong>Vraag je leveranciers om documentatie.</strong> Conformiteitsverklaringen, CE-markering en technische documentatie zijn verplicht voor hoog-risico AI. Heeft jouw leverancier die niet? Dan zit je zelf met een compliance-probleem.</span></li>
+      <li><span class="check-icon">→</span><span><strong>Stel een menselijk toezichtprotocol op.</strong> Wie in jouw team reviewt AI-aanbevelingen, en hoe wordt die review gedocumenteerd?</span></li>
+      <li><span class="check-icon">→</span><span><strong>Update je kandidaat- en medewerkercommunicatie.</strong> Vermeld actief wanneer AI wordt gebruikt in selectie- en beoordelingsprocessen.</span></li>
+      <li><span class="check-icon">→</span><span><strong>Doe de risicoscan.</strong> Weet binnen 9 minuten of jouw HR-toolset als hoog-risico wordt geclassificeerd.</span></li>
+    </ul>
+  </div>
+
+  <h2>Wat als je leverancier zegt dat het zijn verantwoordelijkheid is?</h2>
+  <p>Leveranciers van hoog-risico AI moeten inderdaad voldoen aan uitgebreide verplichtingen (CE-markering, technische documentatie, registratie in de EU-database). Maar de <strong>gebruiker</strong> — jouw organisatie — heeft daarnaast een eigen, zelfstandige nalevingsplicht. Je kunt je niet volledig verschuilen achter je leverancier.</p>
+
+  <p>Als je leverancier geen conformiteitsverklaring kan overleggen, is dat op zichzelf al een signaal dat het systeem mogelijk niet voldoet aan de wet. In dat geval ben je als gebruiker medeverantwoordelijk voor het in gebruik nemen van een niet-gecertificeerd hoog-risico systeem.</p>
+
+  <div class="cta-block">
+    <h3>Weet welke HR-tools jouw organisatie risico lopen</h3>
+    <p>Doe de gratis scan en ontvang binnen 3 minuten een persoonlijk risicorapport op maat.</p>
+    <a href="https://ai-compliance-check.nl" class="btn-gold">Start de gratis scan →</a>
+  </div>
+
+  <div class="related">
+    <p class="related-label">Meer lezen</p>
+    <div class="related-links">
+      <a href="/blog/menselijk-toezichtprotocol" class="related-link">
+        <span class="related-link-title">Wat is een menselijk toezichtprotocol en hoe stel je er één op?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="/blog/eu-ai-act-boetes" class="related-link">
+        <span class="related-link-title">EU AI Act boetes: wat zijn de sancties voor jouw bedrijf?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="/blog/eu-ai-act-staffing-uitzendbureaus" class="related-link">
+        <span class="related-link-title">EU AI Act voor staffing en uitzendbureaus — wat verandert er voor jou?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <a href="https://dvsocial.nl" style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--gold);text-decoration:none;">DV.Social</a>
+  <span>© 2026 DV Social · KVK 96576545 · <a href="mailto:danny@dvsocial.nl">danny@dvsocial.nl</a></span>
+</footer>
+
+</body>
+</html>

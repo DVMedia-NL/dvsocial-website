@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wat is een menselijk toezichtprotocol en hoe stel je er één op? | DV Social</title>
+  <meta name="description" content="De EU AI Act verplicht menselijk toezicht op hoog-risico AI. Wat is een menselijk toezichtprotocol precies, wat moet erin staan en hoe begin je eraan?">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dvsocial.nl/blog/menselijk-toezichtprotocol">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wat is een menselijk toezichtprotocol en hoe stel je er één op?","author":{"@type":"Person","name":"Danny Verbeek","worksFor":{"@type":"Organization","name":"DV Social","url":"https://dvsocial.nl"}},"publisher":{"@type":"Organization","name":"DV Social","url":"https://dvsocial.nl"},"datePublished":"2026-03-17","mainEntityOfPage":"https://dvsocial.nl/blog/menselijk-toezichtprotocol","inLanguage":"nl"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAFAF8; --white: #FFFFFF; --border-light: #E5E3DC;
+      --text: #1A1A1A; --muted: #6B6B6B; --dim: #A8A8A8;
+      --gold: #C9A84C; --gold-bg: #F7F0DC; --gold-dark: #7A5F0A;
+      --surface: #F2F0EA;
+      --nav-bg: rgba(10,10,10,0.95); --nav-border: #2a2a2a; --nav-muted: #888;
+      --danger: #C03030; --danger-bg: #FDEAEA;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--nav-border); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--nav-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; font-family: 'Inter', sans-serif; }
+    .nav-links a:hover { color: #e0e0e0; }
+    .nav-cta { background: var(--gold); color: #000 !important; padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: 600; font-size: 0.85rem !important; }
+
+    .hero { max-width: 720px; margin: 64px auto 48px; padding: 0 24px; }
+    .breadcrumb { font-size: 0.75rem; color: var(--dim); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--dim); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 6px; }
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; color: var(--gold-dark); background: var(--gold-bg); padding: 3px 10px; border-radius: 4px; letter-spacing: 0.04em; margin-bottom: 16px; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; color: var(--text); margin-bottom: 16px; }
+    .lead { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 24px; }
+    .meta { display: flex; gap: 16px; font-size: 0.8rem; color: var(--dim); padding-top: 16px; border-top: 1px solid var(--border-light); flex-wrap: wrap; }
+    .meta strong { color: var(--muted); font-weight: 500; }
+
+    .divider { max-width: 720px; margin: 0 auto 48px; padding: 0 24px; border: none; border-top: 1px solid var(--border-light); }
+
+    article { max-width: 720px; margin: 0 auto; padding: 0 24px 96px; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; color: var(--text); margin: 48px 0 14px; line-height: 1.2; }
+    h3 { font-size: 0.75rem; font-weight: 600; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin: 28px 0 10px; }
+    p { margin-bottom: 16px; font-size: 0.95rem; }
+    a { color: var(--gold-dark); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color 0.15s; }
+    a:hover { text-decoration-color: var(--gold); }
+    strong { font-weight: 600; }
+    ol, ul { margin: 0 0 16px 20px; }
+    ol li, ul li { margin-bottom: 8px; font-size: 0.95rem; }
+
+    .highlight { background: var(--gold-bg); border-left: 3px solid var(--gold); padding: 16px 20px; margin: 24px 0; border-radius: 0 6px 6px 0; }
+    .highlight p { margin-bottom: 0; font-size: 0.9rem; }
+    .danger-box { background: var(--danger-bg); border-left: 3px solid var(--danger); padding: 16px 20px; margin: 24px 0; border-radius: 0 6px 6px 0; }
+    .danger-box p { margin-bottom: 0; font-size: 0.9rem; }
+
+    .risk-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85rem; background: var(--white); border-radius: 8px; overflow: hidden; border: 1px solid var(--border-light); }
+    .risk-table th { text-align: left; padding: 10px 14px; font-size: 0.72rem; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; background: var(--surface); border-bottom: 1px solid var(--border-light); }
+    .risk-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-light); vertical-align: top; }
+    .risk-table tr:last-child td { border-bottom: none; }
+    .risk-table tbody tr:hover td { background: var(--bg); }
+
+    /* Template sectie */
+    .template-block { background: var(--surface); border: 1px solid var(--border-light); border-radius: 8px; padding: 28px; margin: 28px 0; }
+    .template-block h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+    .template-block p { font-size: 0.88rem; color: var(--muted); margin-bottom: 8px; }
+    .template-block p:last-child { margin-bottom: 0; }
+    .template-label { font-size: 0.7rem; font-weight: 700; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+    .template-field { background: var(--white); border: 1px solid var(--border-light); border-radius: 4px; padding: 10px 14px; margin-bottom: 10px; font-size: 0.88rem; color: var(--muted); font-style: italic; }
+
+    .step-list { list-style: none; margin: 0 0 16px 0; counter-reset: steps; }
+    .step-list li { counter-increment: steps; display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--border-light); align-items: flex-start; }
+    .step-list li:last-child { border-bottom: none; }
+    .step-num { background: var(--gold); color: #000; font-weight: 700; font-size: 0.8rem; min-width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .step-list-wrap { background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; padding: 0 20px; margin: 20px 0; }
+
+    .cta-block { background: #141414; border: 1px solid #2a2a2a; padding: 44px 36px; text-align: center; margin: 52px 0; border-radius: 8px; }
+    .cta-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: #fff; text-transform: none; letter-spacing: 0; margin-bottom: 10px; }
+    .cta-block p { color: #888; font-size: 0.9rem; margin-bottom: 24px; }
+    .btn-gold { display: inline-block; background: var(--gold); color: #000; font-size: 0.9rem; font-weight: 600; padding: 0.75rem 1.8rem; border-radius: 4px; text-decoration: none; transition: opacity 0.15s; }
+    .btn-gold:hover { opacity: 0.85; }
+
+    .related { border-top: 1px solid var(--border-light); padding-top: 36px; margin-top: 52px; }
+    .related-label { font-size: 0.72rem; font-weight: 700; color: var(--dim); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--white); border: 1px solid var(--border-light); border-radius: 6px; text-decoration: none; transition: border-color 0.15s; }
+    .related-link:hover { border-color: var(--gold); }
+    .related-link-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text); }
+    .related-link-arrow { color: var(--gold); margin-left: 12px; flex-shrink: 0; }
+
+    footer { border-top: 1px solid var(--border-light); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--dim); flex-wrap: wrap; gap: 10px; }
+    footer a { color: var(--dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem; } .nav-links { display: none; }
+      .hero, article { padding: 0 20px; } .hero { margin-top: 40px; }
+      h1 { font-size: 1.8rem; }
+      footer { padding: 24px 20px; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://dvsocial.nl" class="nav-logo">DV.Social</a>
+  <ul class="nav-links">
+    <li><a href="https://dvsocial.nl/#diensten">Diensten</a></li>
+    <li><a href="https://dvsocial.nl/#scan">Gratis scan</a></li>
+    <li><a href="https://dvsocial.nl/#over">Over ons</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="https://dvsocial.nl/#contact">Contact</a></li>
+    <li><a href="https://ai-compliance-check.nl" class="nav-cta">Doe de scan →</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://dvsocial.nl">Home</a> <span>›</span>
+    <a href="/blog">Blog</a> <span>›</span>
+    Menselijk toezichtprotocol
+  </nav>
+  <span class="tag">Compliance</span>
+  <h1>Wat is een menselijk toezichtprotocol en hoe stel je er één op?</h1>
+  <p class="lead">De EU AI Act verplicht organisaties die hoog-risico AI gebruiken om menselijk toezicht te garanderen. Maar wat betekent dat precies, en hoe ziet zo'n protocol er in de praktijk uit?</p>
+  <div class="meta">
+    <strong>Danny Verbeek — EU AI Act Specialist</strong>
+    <span>17 maart 2026</span>
+    <span>7 min leestijd</span>
+  </div>
+</header>
+
+<hr class="divider">
+
+<article>
+  <p>Artikel 14 van de EU AI Act stelt dat hoog-risico AI-systemen altijd onder effectief menselijk toezicht moeten staan. De wet is opzettelijk technologieneutraal — ze schrijft niet voor hoe je dat toezicht organiseert, maar stelt wel duidelijke eisen aan het resultaat: een mens moet de AI kunnen begrijpen, monitoren en zo nodig overschrijven.</p>
+
+  <div class="highlight">
+    <p><strong>Kerneis uit artikel 14:</strong> de mens die toezicht houdt, moet het vermogen hebben om de werking van het systeem te begrijpen, afwijkingen te herkennen, en te interveniëren. Passief "op de knop drukken" telt niet.</p>
+  </div>
+
+  <h2>Wat is een menselijk toezichtprotocol?</h2>
+  <p>Een menselijk toezichtprotocol is een gedocumenteerde procedure die vastlegt:</p>
+  <ul>
+    <li><strong>Wie</strong> het toezicht uitoefent op een specifiek AI-systeem</li>
+    <li><strong>Wat</strong> die persoon beoordeelt (welke output, welke drempelwaarden)</li>
+    <li><strong>Wanneer</strong> het toezicht plaatsvindt (per beslissing, per batch, periodiek)</li>
+    <li><strong>Hoe</strong> het toezicht wordt gedocumenteerd</li>
+    <li><strong>Wat</strong> er gebeurt als de toezichthouder het niet eens is met de AI-aanbeveling</li>
+  </ul>
+
+  <p>Het protocol is dus niet alleen een procesbeschrijving — het is ook het bewijs dat jouw organisatie actief en aantoonbaar toezicht houdt. Toezichthouders kunnen bij een inspectie om dit document vragen.</p>
+
+  <h2>Wat valt er NIET onder menselijk toezicht?</h2>
+
+  <div class="danger-box">
+    <p><strong>Veelgemaakte fout:</strong> een medewerker die een AI-aanbeveling opent, leest en vervolgens automatisch accordeert, houdt géén toezicht. Toezicht vereist een actieve beoordeling — de toezichthouder moet de mogelijkheid en competentie hebben om te oordelen of de AI-uitkomst correct is.</p>
+  </div>
+
+  <p>Ook het volgende volstaat niet:</p>
+  <ul>
+    <li>Een log-in op het systeem zonder inhoudelijke beoordeling</li>
+    <li>Een handtekening op een door AI gegenereerd document zonder review</li>
+    <li>Een beoordeling door iemand die niet is getraind in de beperkingen van het systeem</li>
+  </ul>
+
+  <h2>Hoe stel je een protocol op? — stap voor stap</h2>
+
+  <div class="step-list-wrap">
+    <ol class="step-list">
+      <li>
+        <span class="step-num">1</span>
+        <div>
+          <strong>Identificeer het AI-systeem en de beslissing</strong><br>
+          Beschrijf wat het systeem doet, welke output het genereert en welke beslissing op basis van die output wordt genomen. Wees specifiek: "het ATS rankt kandidaten op basis van zes criteria en presenteert een shortlist van vijf".
+        </div>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <div>
+          <strong>Wijs een toezichthouder aan</strong><br>
+          Benoem een specifieke functie (niet een afdeling). Beschrijf welke competenties vereist zijn: begrijpt deze persoon hoe het model werkt, welke beperkingen het heeft en hoe fouten eruit zien?
+        </div>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <div>
+          <strong>Definieer de beoordelingscriteria</strong><br>
+          Wat controleert de toezichthouder? Zijn er drempelwaarden (bijv. een score onder X vereist altijd extra review)? Welke signalen wijzen op mogelijke bias of technische storing?
+        </div>
+      </li>
+      <li>
+        <span class="step-num">4</span>
+        <div>
+          <strong>Beschrijf de escalatieprocedure</strong><br>
+          Wat doet de toezichthouder als hij of zij het niet eens is met de AI-uitkomst? Wie wordt geïnformeerd? Hoe wordt de afwijking gedocumenteerd?
+        </div>
+      </li>
+      <li>
+        <span class="step-num">5</span>
+        <div>
+          <strong>Leg de logging-verplichting vast</strong><br>
+          Hoe wordt het toezicht geregistreerd? In welk systeem? Hoe lang worden logs bewaard? Wie heeft toegang voor een eventuele audit?
+        </div>
+      </li>
+      <li>
+        <span class="step-num">6</span>
+        <div>
+          <strong>Periodieke evaluatie</strong><br>
+          Hoe vaak wordt het protocol geëvalueerd? Wanneer is revisie vereist (bij een nieuwe modelversie, bij een calamiteit, bij gewijzigde wetgeving)?
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <h2>Voorbeeld: menselijk toezichtprotocol voor CV-screening</h2>
+
+  <div class="template-block">
+    <h4>Protocol: AI-ondersteunde CV-screening</h4>
+
+    <div class="template-label">AI-systeem</div>
+    <div class="template-field">ATS [naam systeem] — module automatische kandidaatrangschikking op basis van vacaturematch-score (0–100)</div>
+
+    <div class="template-label">Toezichthouder</div>
+    <div class="template-field">Senior Recruiter (functieniveau: minimaal 2 jaar ervaring in werving en selectie). Training vereist: introductiecursus AI Act hoog-risico systemen (intern, ½ dag).</div>
+
+    <div class="template-label">Beoordelingsmoment</div>
+    <div class="template-field">Na elke automatische selectieronde, vóór het versturen van uitnodigingen of afwijzingen.</div>
+
+    <div class="template-label">Beoordelingscriteria</div>
+    <div class="template-field">1) Zijn de top-5 kandidaten inhoudelijk passend? 2) Zijn kandidaten met score &lt;60 terecht afgewezen? 3) Zijn er opmerkelijke patronen (bijv. overrepresentatie of onderrepresentatie van bepaalde groepen)?</div>
+
+    <div class="template-label">Escalatie</div>
+    <div class="template-field">Bij twijfel: overleg met HR-manager. Bij vermoeden van bias: melden aan compliance officer en pauzeren van het proces tot nadere analyse.</div>
+
+    <div class="template-label">Logging</div>
+    <div class="template-field">Toezichthouder noteert naam, datum, selectieronde en bevindingen in het [intern registratiesysteem]. Bewaarperiode: 3 jaar.</div>
+
+    <div class="template-label">Evaluatiecyclus</div>
+    <div class="template-field">Elk kwartaal, en direct bij release van een nieuwe modelversie door de leverancier.</div>
+  </div>
+
+  <h2>Veelgestelde vragen</h2>
+
+  <h3>Moet er voor elk AI-systeem een apart protocol zijn?</h3>
+  <p>Ja. Een generiek toezichtsbeleid is een goed startpunt, maar per hoog-risico AI-systeem moet er een specifiek protocol zijn dat de concrete toepassing, toezichthouder en werkwijze beschrijft.</p>
+
+  <h3>Moet de toezichthouder altijd een senior medewerker zijn?</h3>
+  <p>Niet per se qua functietitel, maar wel qua competentie. De AI Act eist dat de toezichthouder het systeem begrijpt en in staat is om bij te sturen. Dat stelt eisen aan training en ervaring.</p>
+
+  <h3>Is een protocol ook nodig voor AI die we van een externe partij gebruiken?</h3>
+  <p>Ja. Als jij als organisatie het AI-systeem inzet (deployer), ben jij verantwoordelijk voor het menselijk toezicht — ook als het systeem door een derde partij is gebouwd.</p>
+
+  <div class="cta-block">
+    <h3>Weet welke AI-systemen in jouw organisatie een protocol nodig hebben</h3>
+    <p>Doe de gratis scan en ontvang een persoonlijk risicorapport — inclusief inzicht in welke systemen als hoog-risico worden geclassificeerd.</p>
+    <a href="https://ai-compliance-check.nl" class="btn-gold">Start de gratis scan →</a>
+  </div>
+
+  <div class="related">
+    <p class="related-label">Meer lezen</p>
+    <div class="related-links">
+      <a href="/blog/eu-ai-act-hr-directeuren" class="related-link">
+        <span class="related-link-title">EU AI Act voor HR-directeuren: wat is jouw persoonlijke aansprakelijkheid?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="/blog/eu-ai-act-zorgsector" class="related-link">
+        <span class="related-link-title">EU AI Act voor de zorgsector: welke AI-systemen vallen onder hoog-risico?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="/blog/eu-ai-act-boetes" class="related-link">
+        <span class="related-link-title">EU AI Act boetes: wat zijn de sancties voor jouw bedrijf?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <a href="https://dvsocial.nl" style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--gold);text-decoration:none;">DV.Social</a>
+  <span>© 2026 DV Social · KVK 96576545 · <a href="mailto:danny@dvsocial.nl">danny@dvsocial.nl</a></span>
+</footer>
+
+</body>
+</html>
