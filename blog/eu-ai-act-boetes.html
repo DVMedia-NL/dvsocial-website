@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EU AI Act boetes: wat zijn de sancties voor jouw bedrijf? | DV Social</title>
+  <meta name="description" content="De EU AI Act kent boetes tot €35 miljoen of 7% van de wereldwijde omzet. Ontdek welke sancties gelden, wie ze oplegt en hoe je ze voorkomt.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dvsocial.nl/blog/eu-ai-act-boetes">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"EU AI Act boetes: wat zijn de sancties voor jouw bedrijf?","author":{"@type":"Person","name":"Danny Verbeek","worksFor":{"@type":"Organization","name":"DV Social","url":"https://dvsocial.nl"}},"publisher":{"@type":"Organization","name":"DV Social","url":"https://dvsocial.nl"},"datePublished":"2026-03-17","mainEntityOfPage":"https://dvsocial.nl/blog/eu-ai-act-boetes","inLanguage":"nl"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAFAF8; --white: #FFFFFF; --border-light: #E5E3DC;
+      --text: #1A1A1A; --muted: #6B6B6B; --dim: #A8A8A8;
+      --gold: #C9A84C; --gold-bg: #F7F0DC; --gold-dark: #7A5F0A;
+      --surface: #F2F0EA;
+      --nav-bg: rgba(10,10,10,0.95); --nav-border: #2a2a2a; --nav-muted: #888;
+      --danger: #C03030; --danger-bg: #FDEAEA;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--nav-border); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--nav-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; font-family: 'Inter', sans-serif; }
+    .nav-links a:hover { color: #e0e0e0; }
+    .nav-cta { background: var(--gold); color: #000 !important; padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: 600; font-size: 0.85rem !important; }
+
+    .hero { max-width: 720px; margin: 64px auto 48px; padding: 0 24px; }
+    .breadcrumb { font-size: 0.75rem; color: var(--dim); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--dim); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 6px; }
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 700; color: var(--danger); background: var(--danger-bg); padding: 3px 10px; border-radius: 4px; letter-spacing: 0.04em; margin-bottom: 16px; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; color: var(--text); margin-bottom: 16px; }
+    .lead { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 24px; }
+    .meta { display: flex; gap: 16px; font-size: 0.8rem; color: var(--dim); padding-top: 16px; border-top: 1px solid var(--border-light); flex-wrap: wrap; }
+    .meta strong { color: var(--muted); font-weight: 500; }
+
+    .divider { max-width: 720px; margin: 0 auto 48px; padding: 0 24px; border: none; border-top: 1px solid var(--border-light); }
+
+    article { max-width: 720px; margin: 0 auto; padding: 0 24px 96px; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; color: var(--text); margin: 48px 0 14px; line-height: 1.2; }
+    h3 { font-size: 0.75rem; font-weight: 600; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin: 28px 0 10px; }
+    p { margin-bottom: 16px; font-size: 0.95rem; }
+    a { color: var(--gold-dark); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color 0.15s; }
+    a:hover { text-decoration-color: var(--gold); }
+    strong { font-weight: 600; }
+    ol { margin: 0 0 16px 20px; }
+    ol li { margin-bottom: 8px; font-size: 0.95rem; }
+
+    /* Boete cards */
+    .fine-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin: 24px 0; }
+    .fine-card { background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; padding: 20px 16px; text-align: center; }
+    .fine-card.tier-1 { border-top: 3px solid var(--danger); }
+    .fine-card.tier-2 { border-top: 3px solid #D47B20; }
+    .fine-card.tier-3 { border-top: 3px solid var(--gold); }
+    .fine-label { font-size: 0.7rem; font-weight: 700; color: var(--dim); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+    .fine-amount { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; margin-bottom: 4px; line-height: 1; }
+    .fine-card.tier-1 .fine-amount { color: var(--danger); }
+    .fine-card.tier-2 .fine-amount { color: #C06010; }
+    .fine-card.tier-3 .fine-amount { color: var(--gold-dark); }
+    .fine-sub { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+
+    .highlight { background: var(--gold-bg); border-left: 3px solid var(--gold); padding: 16px 20px; margin: 24px 0; border-radius: 0 6px 6px 0; }
+    .highlight p { margin-bottom: 0; font-size: 0.9rem; }
+    .danger-box { background: var(--danger-bg); border-left: 3px solid var(--danger); padding: 16px 20px; margin: 24px 0; border-radius: 0 6px 6px 0; }
+    .danger-box p { margin-bottom: 0; font-size: 0.9rem; }
+
+    .risk-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85rem; background: var(--white); border-radius: 8px; overflow: hidden; border: 1px solid var(--border-light); }
+    .risk-table th { text-align: left; padding: 10px 14px; font-size: 0.72rem; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; background: var(--surface); border-bottom: 1px solid var(--border-light); }
+    .risk-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-light); vertical-align: top; }
+    .risk-table tr:last-child td { border-bottom: none; }
+    .risk-table tbody tr:hover td { background: var(--bg); }
+
+    .cta-block { background: #141414; border: 1px solid #2a2a2a; padding: 44px 36px; text-align: center; margin: 52px 0; border-radius: 8px; }
+    .cta-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: #fff; text-transform: none; letter-spacing: 0; margin-bottom: 10px; }
+    .cta-block p { color: #888; font-size: 0.9rem; margin-bottom: 24px; }
+    .btn-gold { display: inline-block; background: var(--gold); color: #000; font-size: 0.9rem; font-weight: 600; padding: 0.75rem 1.8rem; border-radius: 4px; text-decoration: none; transition: opacity 0.15s; }
+    .btn-gold:hover { opacity: 0.85; }
+
+    .related { border-top: 1px solid var(--border-light); padding-top: 36px; margin-top: 52px; }
+    .related-label { font-size: 0.72rem; font-weight: 700; color: var(--dim); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--white); border: 1px solid var(--border-light); border-radius: 6px; text-decoration: none; transition: border-color 0.15s; }
+    .related-link:hover { border-color: var(--gold); }
+    .related-link-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text); }
+    .related-link-arrow { color: var(--gold); margin-left: 12px; flex-shrink: 0; }
+
+    footer { border-top: 1px solid var(--border-light); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--dim); flex-wrap: wrap; gap: 10px; }
+    footer a { color: var(--dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem; } .nav-links { display: none; }
+      .hero, article { padding: 0 20px; } .hero { margin-top: 40px; }
+      h1 { font-size: 1.8rem; } .fine-cards { grid-template-columns: 1fr; }
+      footer { padding: 24px 20px; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://dvsocial.nl" class="nav-logo">DV.Social</a>
+  <ul class="nav-links">
+    <li><a href="https://dvsocial.nl/#diensten">Diensten</a></li>
+    <li><a href="https://dvsocial.nl/#scan">Gratis scan</a></li>
+    <li><a href="https://dvsocial.nl/#over">Over ons</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="https://dvsocial.nl/#contact">Contact</a></li>
+    <li><a href="https://ai-compliance-check.nl" class="nav-cta">Doe de scan →</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://dvsocial.nl">Home</a> <span>›</span>
+    <a href="/blog">Blog</a> <span>›</span>
+    EU AI Act boetes
+  </nav>
+  <span class="tag">Sancties</span>
+  <h1>EU AI Act boetes: wat zijn de sancties voor jouw bedrijf?</h1>
+  <p class="lead">De EU AI Act bevat de zwaarste boetes ooit voor technologiewetgeving. Tot €35 miljoen of 7% van je wereldwijde omzet — én de persoonlijke aansprakelijkheid van je HR-directeur.</p>
+  <div class="meta">
+    <strong>Danny Verbeek — EU AI Act Specialist</strong>
+    <span>17 maart 2026</span>
+    <span>7 min leestijd</span>
+  </div>
+</header>
+
+<hr class="divider">
+
+<article>
+  <p>Wanneer de volledige handhaving van de EU AI Act op <strong>2 augustus 2026</strong> ingaat, beschikken nationale toezichthouders over een uitgebreid sanctie-arsenaal. Boetes worden niet automatisch opgelegd, maar zodra een klacht binnenkomt of een inspectie plaatsvindt, kun je snel geconfronteerd worden met ernstige financiële en reputatiegevolgen.</p>
+
+  <div class="fine-cards">
+    <div class="fine-card tier-1">
+      <div class="fine-label">Verboden AI</div>
+      <div class="fine-amount">€35 mln</div>
+      <div class="fine-sub">of 7% wereldwijde omzet</div>
+    </div>
+    <div class="fine-card tier-2">
+      <div class="fine-label">Hoog-risico overtredingen</div>
+      <div class="fine-amount">€15 mln</div>
+      <div class="fine-sub">of 3% wereldwijde omzet</div>
+    </div>
+    <div class="fine-card tier-3">
+      <div class="fine-label">Onjuiste informatie</div>
+      <div class="fine-amount">€7,5 mln</div>
+      <div class="fine-sub">of 1,5% wereldwijde omzet</div>
+    </div>
+  </div>
+
+  <h2>De drie boetecategorieën</h2>
+
+  <h3>Categorie 1 — verboden AI (€35 miljoen / 7%)</h3>
+  <p>De zwaarste boete geldt voor het gebruiken van AI-systemen die de wet volledig verbiedt. Dit verbod is per <strong>2 februari 2025</strong> al van kracht. Verboden systemen zijn onder meer emotieherkenning op de werkvloer, sociale scoresystemen en real-time biometrische identificatie in openbare ruimten.</p>
+
+  <div class="danger-box">
+    <p><strong>Let op:</strong> sommige van deze systemen worden aangeboden als gewone HR-software. Emotieherkenning bij sollicitatiegesprekken valt onder de verboden categorie — ook als je leverancier dit als "AI-gedreven inzicht" positioneert.</p>
+  </div>
+
+  <h3>Categorie 2 — hoog-risico overtredingen (€15 miljoen / 3%)</h3>
+  <p>Wanneer je een hoog-risico AI-systeem gebruikt zonder aan de wettelijke vereisten te voldoen — geen risicobeheersysteem, geen menselijk toezichtprotocol, geen documentatie — riskeer je een boete tot €15 miljoen of 3% van je wereldwijde omzet.</p>
+
+  <table class="risk-table">
+    <thead><tr><th>Toepassing</th><th>Sector</th></tr></thead>
+    <tbody>
+      <tr><td>CV-screening en kandidaatrangschikking</td><td>HR, werving &amp; selectie</td></tr>
+      <tr><td>Kredietbeoordeling</td><td>Finance, leasing</td></tr>
+      <tr><td>Medische diagnoseondersteuning</td><td>Zorg</td></tr>
+      <tr><td>Veiligheidsclassificatie medewerkers</td><td>Logistiek, beveiliging</td></tr>
+      <tr><td>Biometrische toegangscontrole</td><td>Alle sectoren</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Categorie 3 — onjuiste informatie (€7,5 miljoen / 1,5%)</h3>
+  <p>Deze boete geldt wanneer een organisatie onjuiste of misleidende informatie verstrekt aan toezichthouders. Denk aan het bewust verzwijgen van AI-gebruik of het indienen van incorrecte documentatie bij een inspectie.</p>
+
+  <h2>De persoonlijke aansprakelijkheid van HR-directeuren</h2>
+  <div class="highlight">
+    <p><strong>Specifiek voor HR-directeuren:</strong> wanneer je verantwoordelijk bent voor de aanschaf en inzet van AI-systemen in het wervings- en selectieproces, en het blijkt dat deze systemen niet voldoen aan de AI Act-vereisten, kun je persoonlijk aangesproken worden — zowel door je eigen organisatie als door gedupeerde sollicitanten via het arbeidsrecht.</p>
+  </div>
+
+  <h2>Hoe worden boetes bepaald?</h2>
+  <table class="risk-table">
+    <thead><tr><th>Verzachtend</th><th>Verzwarend</th></tr></thead>
+    <tbody>
+      <tr><td>Aantoonbaar compliance-programma aanwezig</td><td>Bewuste of herhaalde overtreding</td></tr>
+      <tr><td>Snelle correctie na ontdekking</td><td>Weigering mee te werken aan inspectie</td></tr>
+      <tr><td>Actieve samenwerking met toezichthouder</td><td>Kwetsbare doelgroepen getroffen</td></tr>
+      <tr><td>Kleine bedrijfsomvang (MKB)</td><td>Financieel voordeel behaald door overtreding</td></tr>
+    </tbody>
+  </table>
+  <p>Het hebben van een gedocumenteerd compliance-traject — ook als het nog niet volledig is — weegt zwaar mee als verzachtende factor. Toezichthouders zijn niet uit op sanctioneren van bedrijven die serieus bezig zijn.</p>
+
+  <h2>Hoe voorkom je een boete?</h2>
+  <ol>
+    <li><strong>Inventariseer je AI-gebruik</strong> — welke systemen gebruik je, voor welk doel, en wie besluit op basis van die AI?</li>
+    <li><strong>Classificeer het risiconiveau</strong> — valt jouw gebruik onder hoog-risico?</li>
+    <li><strong>Documenteer alles</strong> — toezichthouders vragen documentatie. Die moet er zijn.</li>
+    <li><strong>Stel een menselijk toezichtprotocol in</strong> — wie controleert de AI-beslissingen?</li>
+    <li><strong>Train je medewerkers</strong> — iedereen die met AI werkt, moet de beperkingen kennen.</li>
+  </ol>
+
+  <div class="cta-block">
+    <h3>Weet je al of jouw organisatie hoog-risico systemen gebruikt?</h3>
+    <p>Doe de gratis scan en ontvang binnen 3 minuten een persoonlijk risicorapport.</p>
+    <a href="https://ai-compliance-check.nl" class="btn-gold">Start de gratis scan →</a>
+  </div>
+
+  <div class="related">
+    <p class="related-label">Meer lezen</p>
+    <div class="related-links">
+      <a href="/blog/wat-is-de-eu-ai-act" class="related-link">
+        <span class="related-link-title">Wat is de EU AI Act? Uitleg voor het Nederlandse MKB</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="/blog/eu-ai-act-deadline" class="related-link">
+        <span class="related-link-title">De EU AI Act deadline: wat moet je doen voor 2 augustus 2026?</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <a href="https://dvsocial.nl" style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--gold);text-decoration:none;">DV.Social</a>
+  <span>© 2026 DV Social · KVK 96576545 · <a href="mailto:danny@dvsocial.nl">danny@dvsocial.nl</a></span>
+</footer>
+
+</body>
+</html>
