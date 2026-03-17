@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pakketten — DV Social | EU AI Act Compliance</title>
+  <meta name="description" content="Bekijk de compliance pakketten van DV Social. Van een snelle risicoscan tot volledig ontzorgd — er is altijd een logische eerste stap." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0A0A0A;
+      --surface: #111111;
+      --surface2: #161616;
+      --border: #1E1E1E;
+      --gold: #C9A84C;
+      --gold-dim: #8B6914;
+      --white: #E0E0E0;
+      --dim: #666666;
+      --red: #C0392B;
+      --radius: 6px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-weight: 700; font-size: 15px; color: var(--white);
+      text-decoration: none; letter-spacing: 0.5px;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      color: var(--dim); text-decoration: none; font-size: 14px;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      background: var(--gold); color: #000;
+      padding: 8px 20px; border-radius: var(--radius);
+      text-decoration: none; font-size: 14px; font-weight: 600;
+      transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: .85; }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 32px 60px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 100px; padding: 6px 16px;
+      font-size: 12px; color: var(--gold); letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700; line-height: 1.2;
+      margin-bottom: 16px; color: var(--white);
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p {
+      color: var(--dim); font-size: 17px; max-width: 520px;
+      margin: 0 auto 32px;
+    }
+    .deadline-bar {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(192,57,43,0.12);
+      border: 1px solid rgba(192,57,43,0.3);
+      border-radius: var(--radius);
+      padding: 10px 20px;
+      font-size: 13px; color: #e05a4a;
+    }
+
+    /* PACKAGES */
+    .packages-section { padding: 80px 32px; max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(22px, 3vw, 32px); font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .section-sub { color: var(--dim); margin-bottom: 56px; font-size: 16px; }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .package-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 36px 32px;
+      position: relative;
+      transition: border-color .25s, transform .25s;
+    }
+    .package-card:hover {
+      border-color: var(--gold-dim);
+      transform: translateY(-3px);
+    }
+    .package-card.featured {
+      border-color: var(--gold);
+      background: var(--surface2);
+    }
+    .featured-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--gold); color: #000;
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 4px 16px;
+      border-radius: 100px; white-space: nowrap;
+    }
+    .package-tier {
+      font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
+    }
+    .package-name {
+      font-size: 22px; font-weight: 700; margin-bottom: 8px;
+    }
+    .package-desc {
+      color: var(--dim); font-size: 14px; margin-bottom: 28px;
+      min-height: 60px;
+    }
+    .package-divider {
+      height: 1px; background: var(--border); margin-bottom: 24px;
+    }
+    .package-features { list-style: none; margin-bottom: 36px; }
+    .package-features li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 14px; color: var(--white); margin-bottom: 12px;
+    }
+    .package-features li::before {
+      content: '✓';
+      color: var(--gold); font-weight: 700; flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .package-features li.dimmed { color: var(--dim); }
+    .package-features li.dimmed::before { color: var(--border); }
+
+    .package-cta {
+      display: block; text-align: center;
+      padding: 13px 24px; border-radius: var(--radius);
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      transition: opacity .2s, background .2s;
+    }
+    .package-cta.primary {
+      background: var(--gold); color: #000;
+    }
+    .package-cta.primary:hover { opacity: .88; }
+    .package-cta.secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--white);
+    }
+    .package-cta.secondary:hover { border-color: var(--gold-dim); }
+
+    /* COMPARISON */
+    .comparison-section { padding: 0 32px 80px; max-width: 900px; margin: 0 auto; }
+    .comparison-note {
+      text-align: center; color: var(--dim); font-size: 14px;
+      margin-bottom: 48px;
+    }
+
+    /* PROCESS */
+    .process-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 32px;
+    }
+    .process-inner { max-width: 800px; margin: 0 auto; }
+    .process-steps { display: flex; flex-direction: column; gap: 0; margin-top: 48px; }
+    .process-step {
+      display: flex; gap: 28px; padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .process-step:last-child { border-bottom: none; }
+    .step-number {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--gold); color: #000;
+      font-weight: 700; font-size: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .step-content h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+    .step-content p { color: var(--dim); font-size: 14px; }
+
+    /* FAQ */
+    .faq-section { padding: 80px 32px; max-width: 720px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+    }
+    .faq-q { font-weight: 600; margin-bottom: 8px; }
+    .faq-a { color: var(--dim); font-size: 14px; line-height: 1.7; }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 80px 32px;
+      text-align: center;
+    }
+    .cta-banner h2 { font-size: clamp(22px, 3vw, 32px); margin-bottom: 12px; }
+    .cta-banner p { color: var(--dim); max-width: 480px; margin: 0 auto 36px; font-size: 16px; }
+    .cta-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-gold {
+      background: var(--gold); color: #000;
+      padding: 14px 32px; border-radius: var(--radius);
+      font-weight: 600; text-decoration: none; font-size: 15px;
+      transition: opacity .2s;
+    }
+    .btn-gold:hover { opacity: .88; }
+    .btn-outline {
+      border: 1px solid var(--border); color: var(--white);
+      padding: 14px 32px; border-radius: var(--radius);
+      font-weight: 500; text-decoration: none; font-size: 15px;
+      transition: border-color .2s;
+    }
+    .btn-outline:hover { border-color: var(--gold-dim); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px; text-align: center;
+      color: var(--dim); font-size: 13px;
+    }
+    footer a { color: var(--dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    @media (max-width: 900px) {
+      .packages-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">DV<span>.</span>Social</a>
+  <ul class="nav-links">
+    <li><a href="/#diensten">Diensten</a></li>
+    <li><a href="/#over">Over ons</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="https://ai-compliance-check.nl" class="nav-cta">Doe de gratis scan →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    <span>⚡</span> EU AI Act · Handhaving per 2 augustus 2026
+  </div>
+  <h1>De juiste aanpak,<br><span>voor elke situatie</span></h1>
+  <p>Of je nu snel wil weten waar je staat, of direct volledig compliant wil zijn — er is altijd een logische eerste stap.</p>
+  <div class="deadline-bar">
+    ⚠️ &nbsp;Nog minder dan 6 maanden tot de handhavingsdeadline
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages-section">
+  <div class="section-label">Pakketten</div>
+  <h2 class="section-title">Kies wat bij jouw situatie past</h2>
+  <p class="section-sub">Geen verborgen kosten. Geen langlopende contracten. Altijd direct contact met Danny.</p>
+
+  <div class="packages-grid">
+
+    <!-- BASIS -->
+    <div class="package-card">
+      <div class="package-tier">Stap 1</div>
+      <div class="package-name">Basis Audit</div>
+      <div class="package-desc">Inzicht in waar je staat. Snel, concreet en zonder verplichtingen.</div>
+      <div class="package-divider"></div>
+      <ul class="package-features">
+        <li>Volledige AI Compliance Check (9 vragen)</li>
+        <li>Persoonlijk risicoprofiel rapport</li>
+        <li>Gap-analyse op basis van jouw antwoorden</li>
+        <li>Adviesgesprek van 45 minuten</li>
+        <li>Prioriteitenlijst: wat moet als eerste</li>
+        <li class="dimmed">Documentatieset</li>
+        <li class="dimmed">Implementatiebegeleiding</li>
+        <li class="dimmed">Leveranciersbeoordeling</li>
+      </ul>
+      <a href="https://calendly.com/danny-dvsocial/30min" class="package-cta secondary">Plan een gesprek →</a>
+    </div>
+
+    <!-- COMPLEET -->
+    <div class="package-card featured">
+      <div class="featured-badge">Meest gekozen</div>
+      <div class="package-tier">Stap 2</div>
+      <div class="package-name">Compleet</div>
+      <div class="package-desc">Volledige doorlichting én een documentatieset die klaar is voor inspectie.</div>
+      <div class="package-divider"></div>
+      <ul class="package-features">
+        <li>Alles uit Basis Audit</li>
+        <li>5-daags due diligence traject</li>
+        <li>Artikel 14 Human Oversight Protocol</li>
+        <li>Artikel 43 conformiteitsdossier</li>
+        <li>Transparantieverklaring naar kandidaten</li>
+        <li>Leveranciersbeoordeling (Annex IV)</li>
+        <li>Bias Audit Framework</li>
+        <li class="dimmed">Doorlopende monitoring</li>
+      </ul>
+      <a href="https://calendly.com/danny-dvsocial/30min" class="package-cta primary">Plan een gesprek →</a>
+    </div>
+
+    <!-- TOTAAL ONTZORGD -->
+    <div class="package-card">
+      <div class="package-tier">Stap 3</div>
+      <div class="package-name">Totaal ontzorgd</div>
+      <div class="package-desc">Volledig compliant worden én blijven. Wij nemen het over.</div>
+      <div class="package-divider"></div>
+      <ul class="package-features">
+        <li>Alles uit Compleet pakket</li>
+        <li>Volledige implementatiebegeleiding</li>
+        <li>Verwerkersovereenkomst review</li>
+        <li>Doorlopende compliance monitoring</li>
+        <li>Kwartaalcheck op nieuwe regelgeving</li>
+        <li>Directe lijn met Danny bij vragen</li>
+        <li>Certificeerbare documentatieset</li>
+        <li>Klaar voor toezichthoudersinspectie</li>
+      </ul>
+      <a href="https://calendly.com/danny-dvsocial/30min" class="package-cta secondary">Plan een gesprek →</a>
+    </div>
+
+  </div>
+
+  <p class="comparison-note" style="margin-top: 40px;">
+    Niet zeker welk pakket past? Doe eerst de <a href="https://ai-compliance-check.nl" style="color: var(--gold);">gratis scan</a> — je ontvangt direct een aanbeveling op basis van jouw situatie.
+  </p>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="process-inner">
+    <div class="section-label">Werkwijze</div>
+    <h2 class="section-title">Hoe het werkt</h2>
+    <p class="section-sub">Van eerste gesprek tot aantoonbare conformiteit — in vier stappen.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Gratis AI Compliance Scan</h3>
+          <p>Beantwoord 9 gerichte vragen over jouw AI-gebruik. Je ontvangt direct een risicoprofiel en een persoonlijk rapport in je inbox.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Intake gesprek (45 min · kosteloos)</h3>
+          <p>We bespreken jouw situatie en bepalen samen wat de beste aanpak is. Geen verkooppraatje — gewoon eerlijk advies.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Audit en documentatie</h3>
+          <p>We voeren de audit uit en leveren een volledige documentatieset op. Concreet, implementeerbaar en klaar voor inspectie.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Compliant vóór 2 augustus 2026</h3>
+          <p>Je bent aantoonbaar compliant met de EU AI Act. Met de juiste documentatie om dat ook te bewijzen bij een toezichthouder.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-label">Veelgestelde vragen</div>
+  <h2 class="section-title" style="margin-bottom: 40px;">Wat je misschien wil weten</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Ik weet niet welk pakket ik nodig heb. Wat nu?</div>
+    <div class="faq-a">Doe de gratis scan op ai-compliance-check.nl. Je ontvangt direct een aanbeveling op basis van jouw antwoorden. Daarna plannen we een kosteloos gesprek om te bespreken wat het beste past.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Hoe snel ben ik compliant?</div>
+    <div class="faq-a">Het Basis pakket levert binnen één week een compleet beeld. Het Compleet pakket duurt vijf werkdagen na de intake. We zorgen altijd dat je vóór 2 augustus 2026 klaar bent.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Zijn er terugkerende kosten?</div>
+    <div class="faq-a">Het Basis en Compleet pakket zijn eenmalig. Het Totaal ontzorgd pakket omvat doorlopende monitoring — de kosten bespreken we in het intakegesprek.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Werken jullie alleen met HR-afdelingen?</div>
+    <div class="faq-a">Onze focus ligt op HR en staffing omdat AI daar het meest ingrijpende compliancerisico creëert. Maar we helpen ook andere sectoren. Neem contact op en we kijken samen wat mogelijk is.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Wat als ik al software gebruik die AI bevat?</div>
+    <div class="faq-a">Dan is dit juist urgent. Gangbare ATS-systemen als Recruitee, Carerix en OTYS bevatten standaard AI-functionaliteit — vaak zonder dat gebruikers het weten. Dit valt direct onder de EU AI Act.</div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <h2>Niet zeker waar je staat?</h2>
+  <p>Doe de gratis scan en ontvang binnen 5 minuten een persoonlijk risicoprofiel in je inbox.</p>
+  <div class="cta-group">
+    <a href="https://ai-compliance-check.nl" class="btn-gold">Doe de gratis scan →</a>
+    <a href="https://calendly.com/danny-dvsocial/30min" class="btn-outline">Plan direct een gesprek</a>
+  </div>
+</section>
+
+<footer>
+  <p style="margin-bottom: 8px;">
+    <a href="/">DV.Social</a> &nbsp;·&nbsp;
+    <a href="mailto:danny@dvsocial.nl">danny@dvsocial.nl</a> &nbsp;·&nbsp;
+    KVK 96576545
+  </p>
+  <p>© 2026 DV Social · EU AI Act Compliance · Nederland</p>
+</footer>
+
+</body>
+</html>
